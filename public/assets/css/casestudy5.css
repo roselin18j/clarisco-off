@@ -1,0 +1,1202 @@
+.case-htags {
+    font-size: 31px;
+    font-weight: 900;
+
+    @media screen and (max-width : 881px) {
+        font-size: 25px;
+    }
+
+    @media screen and (max-width : 650px) {
+        font-size: 22px;
+    }
+
+    @media screen and (max-width : 480px) {
+        font-size: 20px;
+    }
+}
+
+.pawqeris-hero {
+    background-color: #fff;
+    overflow: hidden;
+
+    @media screen and (max-width : 550px) {
+        padding-top: 36px;
+    }
+
+    .pawqeris-hero-row {
+        margin-top: 130px;
+
+        @media screen and (max-width : 991px) {
+            margin-top: 80px;
+        }
+
+        @media screen and (max-width : 767px) {
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width : 550px) {
+            margin-top: 10px;
+        }
+
+
+        @media screen and (max-width : 767px) {
+            padding-top: 50px;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width : 550px) {
+            padding-top: 20px;
+        }
+
+        .hero-img {
+            @media screen and (max-width : 767px) {
+                margin-top: 40px;
+            }
+
+
+        }
+    }
+
+    .pawqeris-hero-title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000;
+
+        @media screen and (max-width : 991px) {
+            font-size: 23px;
+            line-height: 35px;
+        }
+
+
+        @media screen and (max-width : 768px) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+
+        @media screen and (max-width : 550px) {
+            font-size: 19px;
+            line-height: 28px;
+        }
+    }
+
+    .pawqeris-hero-btn {
+        background-color: #8582d9;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 9px 18px;
+        border-radius: 5px;
+        border: none;
+
+        @media screen and (max-width : 500px) {
+            font-size: 13px;
+            padding: 8px 15px;
+        }
+
+        &:hover {
+            background-color: #706cc7;
+            color: #fff;
+        }
+    }
+
+    .pawqeris-hero-image {
+        max-width: 100%;
+        height: 450px;
+        object-fit: contain;
+
+        @media screen and (max-width : 768px) {
+            height: 390px;
+        }
+
+        @media screen and (max-width : 650px) {
+            height: 340px;
+        }
+
+        @media screen and (max-width :450px) {
+            height: 290px;
+        }
+    }
+}
+
+
+
+.pawqeris-snapshot {
+    background-color: #fff;
+
+    .container {
+        @media screen and (max-width : 991px) {
+            max-width: 100%;
+        }
+    }
+
+    .mob-img {
+        display: none;
+
+        @media screen and (max-width : 881px) {
+            display: block;
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 50%;
+            margin: 40px auto 60px;
+        }
+
+        @media screen and (max-width : 550px) {
+            margin: 30px auto 40px;
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    .paw-row {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+
+    .cont-itm {
+        width: 30%;
+
+        @media screen and (max-width : 881px) {
+            width: 50%;
+            padding: 0px 19px !important;
+        }
+
+        @media screen and (max-width : 480px) {
+            width: 100%;
+            padding: 0px 20px !important;
+        }
+
+        &.rytProj-item {
+            @media screen and (max-width : 881px) {
+                padding-left: 0px !important;
+            }
+
+            @media screen and (max-width : 480px) {
+                padding: 0px 20px !important;
+            }
+        }
+    }
+
+    .cenImg-item {
+        max-width: 417px;
+        width: 100%;
+
+        @media screen and (max-width : 1200px) {
+            max-width: 360px;
+        }
+
+        @media screen and (max-width : 881px) {
+            display: none;
+        }
+    }
+
+    .pawqeris-info-item {
+        position: relative;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+
+        @media screen and (max-width : 881px) {
+            border-bottom: 2px solid #9baae0;
+            margin-bottom: 20px !important;
+            padding-bottom: 0 !important;
+            min-height: 60px;
+
+            &:last-of-type {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        @media screen and (max-width : 480px) {
+            margin-bottom: 15px !important;
+            min-height: 50px;
+
+            &:last-of-type {
+                margin-bottom: 15px !important;
+            }
+        }
+
+        &.paw-two {
+            padding-bottom: 50px;
+
+            @media screen and (max-width : 881px) {
+                padding-bottom: 0 !important;
+            }
+        }
+
+        &::before {
+            content: '';
+            background: url("https://assets.clarisco.com/assets/case-study/arr1.webp") no-repeat;
+            position: absolute;
+            height: 41px;
+            width: 100%;
+            background-size: contain;
+            width: calc(100% - -19px);
+            right: -20px;
+            bottom: -50%;
+
+            @media screen and (max-width : 1500px) {
+                width: calc(100% - -35px);
+            }
+
+            @media screen and (max-width : 1399px) {
+                width: calc(100% - -23px);
+            }
+
+            @media screen and (max-width : 881px) {
+                display: none;
+            }
+
+        }
+
+        &.pawqeris-right-item {
+            padding-bottom: 40px;
+            padding-left: 60px;
+            margin-bottom: 70px;
+
+            &.paw-two {
+                padding-bottom: 60px;
+            }
+
+            @media screen and (max-width : 991px) {
+                padding-bottom: 20px;
+                padding-left: 20px;
+            }
+
+            @media screen and (max-width : 881px) {
+                padding-left: 0px;
+            }
+
+            &::before {
+                content: '';
+                background: url("https://assets.clarisco.com/assets/case-study/arr2.webp") no-repeat center/contain;
+                right: 0;
+                left: -20px;
+                bottom: -8%;
+
+                @media screen and (max-width : 881px) {
+                    display: none;
+                }
+
+            }
+
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        h6 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #5964bd;
+            margin-bottom: 5px;
+
+            @media screen and (max-width : 881px) {
+                font-size: 15px;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 0;
+            line-height: 1.4;
+
+            @media screen and (max-width : 881px) {
+                font-size: 11px;
+            }
+        }
+    }
+
+}
+
+
+
+.pawqeris-overview {
+    background-color: #fff;
+
+    .pawqeris-overview-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .pawqeris-overview-text {
+        font-size: 14px;
+        line-height: 21px;
+        color: #777;
+        margin-bottom: 18px;
+
+        @media screen and (max-width : 550px) {
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .pawqeris-overview-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+
+.pawqeris-challenge {
+    background-color: #fff;
+
+    .pawqeris-challenge-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .pawqeris-challenge-description {
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+
+        @media screen and (max-width : 768px) {
+            font-size: 12px;
+        }
+    }
+
+    .pawqeris-challenge-item {
+        min-height: 50px;
+        background-color: #d7dff2;
+
+        @media screen and (max-width : 650px) {
+            flex-direction: column;
+        }
+
+        .pawqeris-challenge-label {
+            flex: 0 0 23%;
+            background-color: #9baae1;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 26px 10px;
+
+            @media screen and (max-width : 991px) {
+                font-size: 12px;
+            }
+
+            @media screen and (max-width : 768px) {
+                font-size: 9px;
+                padding: 18px 8px;
+            }
+
+            @media screen and (max-width : 650px) {
+                padding: 10px;
+                font-size: 11px;
+            }
+        }
+
+        .pawqeris-challenge-content {
+            flex: 1;
+            color: #111;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 0 15px;
+            margin-bottom: 0;
+
+            @media screen and (max-width : 991px) {
+                font-size: 12px;
+            }
+
+            @media screen and (max-width : 768px) {
+                font-size: 9px;
+            }
+
+            @media screen and (max-width : 650px) {
+                padding: 15px;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.pawqeris-objectives {
+    background-color: #fff;
+    color: #25283A;
+    overflow: hidden;
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .pawqeris-obj-row {
+        flex-direction: row;
+
+        @media screen and (max-width : 881px) {
+            flex-direction: column;
+        }
+
+        .pawqeris-objectives-content {
+            @media screen and (max-width : 881px) {
+                width: 100% !important;
+                padding: 20px !important;
+            }
+
+
+            @media screen and (max-width : 650px) {
+                padding: 10px !important;
+            }
+
+            @media screen and (max-width : 450px) {
+                padding: 0px !important;
+            }
+
+            &.pawqeris-objectives-right {
+                @media screen and (max-width : 450px) {
+                    padding-top: 30px !important;
+                }
+            }
+        }
+
+        @media screen and (max-width : 881px) {
+            .pawqeris-objectives-curve {
+                display: none !important;
+            }
+        }
+
+
+    }
+
+    .pawqeris-objectives-content {
+        padding: 1.5rem 2rem;
+    }
+
+    .pawqeris-objectives-left {
+        padding-right: 3rem;
+    }
+
+    .pawqeris-objectives-right {
+        padding-left: 3rem;
+    }
+
+
+    .pawqeris-objectives-title {
+        letter-spacing: -1px;
+        color: #25283A;
+    }
+
+
+    .pawqeris-objectives-line {
+        width: 35px;
+        height: 3px;
+        background-color: #9BAAE1;
+        border-radius: 10px;
+    }
+
+
+    .pawqeris-objectives-intro,
+    .pawqeris-solution-description {
+        font-size: 15px;
+        line-height: 24px;
+        color: #555B73;
+
+        @media screen and (max-width : 991px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media screen and (max-width : 550px) {
+            font-size: 13px;
+            line-height: 19px;
+        }
+    }
+
+
+    .pawqeris-objectives-list {
+        .pawqeris-objective-number {
+            min-width: 35px;
+            color: #8295D3;
+            font-weight: 500;
+        }
+
+        .pawqeris-objective-text {
+            padding-left: 0.75rem;
+            border-left: 2px solid #9BAAE1;
+            color: #41465C;
+            font-size: 15px;
+            line-height: 22px;
+
+            @media screen and (max-width : 550px) {
+                font-size: 13px;
+                line-height: 19px;
+            }
+        }
+    }
+
+
+    .pawqeris-solution-highlight {
+        background-color: #E6EAF9;
+        border-radius: 50px;
+        padding: 1rem 1.5rem;
+        color: #525D85;
+        font-size: 15px;
+        font-style: italic;
+        line-height: 22px;
+
+        @media screen and (max-width : 991px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media screen and (max-width : 550px) {
+            font-size: 13px;
+            line-height: 19px;
+        }
+    }
+
+    .pawqeris-objectives-curve {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 65px;
+        z-index: 1;
+        pointer-events: none;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+}
+
+.pawqeris-primary-features {
+    background-color: #fff;
+
+    .container {
+        @media screen and (max-width : 1025px) {
+            max-width: 900px;
+        }
+    }
+
+    .pawqeris-features-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+    }
+
+
+    .pawqeris-features-description {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #777;
+    }
+
+    .pawqeris-features-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+
+        @media screen and (max-width : 1200px) {
+            height: 598px;
+        }
+
+        @media screen and (max-width : 881px) {
+            height: 500px;
+        }
+
+        @media screen and (max-width :550px) {
+            height: 412px;
+        }
+    }
+
+    .pawqeris-features-list {
+        padding-left: 15px;
+
+        .pawqeris-feature-item {
+            padding-left: 2px;
+            margin-bottom: 40px;
+
+            &::marker {
+                font-size: 8px;
+                color: #333;
+            }
+
+            @media screen and (max-width : 1200px) {
+                margin-bottom: 30px;
+            }
+
+            @media screen and (max-width : 881px) {
+                margin-bottom: 16px;
+            }
+
+            h6 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #222;
+                margin-bottom: 5px;
+
+                @media screen and (max-width : 881px) {
+                    font-size: 15px;
+                }
+
+                @media screen and (max-width : 550px) {
+                    font-size: 13px;
+                }
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 1.5;
+                color: #555;
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+.pawqeris-booking-features {
+    background-color: #fff;
+
+    .pawqeris-booking-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+        line-height: 30px;
+    }
+
+    .pawqeris-booking-description {
+        font-size: 13px;
+        line-height: 25px;
+        color: #777;
+
+    }
+
+    .pawqeris-secondary-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .pawqeris-secondary-card {
+        border: 1px solid #e4e4e4;
+        border-radius: 8px;
+        padding: 80px 20px;
+
+        @media screen and (max-width : 881px) {
+            padding: 50px 20px;
+        }
+
+        @media screen and (max-width : 650px) {
+            padding: 35px 15px;
+        }
+    }
+
+    .pawqeris-secondary-item {
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width : 881px) {
+            margin-bottom: 18px;
+        }
+
+        @media screen and (max-width : 650px) {
+            margin-bottom: 10px;
+            flex-direction: column;
+        }
+    }
+
+    .pawqeris-secondary-label {
+        flex: 0 0 22%;
+        text-align: right;
+        padding-right: 15px;
+
+        h6 {
+            font-size: 11px;
+            font-weight: 700;
+            color: #111;
+            line-height: 17px;
+
+            @media screen and (max-width : 550px) {
+                font-size: 12px;
+                text-align: start;
+            }
+        }
+    }
+
+    .pawqeris-secondary-content {
+        flex: 1;
+        padding-left: 10px;
+
+        p {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #777;
+
+            @media screen and (max-width : 550px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+.pawqeris-technology {
+    background-color: #fff;
+
+    .pawqeris-technology-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .pawqeris-technology-table {
+        font-size: 14px;
+
+        @media screen and (max-width : 500px) {
+            width: 500px;
+        }
+
+        .pawqeris-technology-header {
+            background-color: #29293f;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+
+            >div {
+                padding: 20px 12px;
+                border-right: 1px solid rgba(255, 255, 255, .25);
+
+                &:last-child {
+                    border-right: 0;
+                }
+
+                @media screen and (max-width : 1100px) {
+                    padding: 14px 9px;
+                }
+            }
+        }
+
+        .pawqeris-technology-row {
+            margin-bottom: 22px;
+
+            @media screen and (max-width : 1100px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .pawqeris-technology-layer {
+            background-color: #9baae0;
+            padding: 12px 16px;
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+
+
+            @media screen and (max-width : 1024px) {
+                padding: 12px 12px;
+            }
+        }
+
+        .pawqeris-technology-approach {
+            background-color: #d7dff2;
+            padding: 10px 30px;
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width : 1024px) {
+                padding: 10px 13px;
+            }
+
+        }
+
+        p {
+            color: #000;
+            opacity: 60%;
+            margin-bottom: 0;
+            font-size: 15px;
+
+            @media screen and (max-width : 1300px) {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+
+.pawqeris-process {
+    background-color: #fff;
+
+    .pawqeris-process-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .pawqeris-process-item {
+        .pawqeris-process-item-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #111;
+
+            @media screen and (max-width : 550px) {
+                font-size: 14px;
+            }
+        }
+
+        .pawqeris-process-item-description {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #777;
+        }
+    }
+
+    .pawqeris-process-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+.pawqeris-challenge {
+    background-color: #fff;
+
+    .pawqeris-process-item-description {
+        font-size: 13px;
+        line-height: 1.8;
+        color: #777;
+    }
+}
+
+
+
+.pawqeris-results {
+    background-color: #fff;
+
+    .res-row {
+        @media screen and (max-width : 767px) {
+            flex-direction: column;
+        }
+    }
+
+
+
+    .pawqeris-results-title {
+        font-size: 18px;
+        color: #000;
+    }
+
+    .pawqeris-results-text {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #777;
+    }
+
+    .pawqeris-results-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+.pawqeris-conclusion {
+
+    background-color: #fff;
+
+    .pawqeris-conclusion-text {
+        font-size: 13px;
+        line-height: 22px;
+        color: #777;
+    }
+
+}
+
+
+.nova-hero {
+    margin-top: 100px;
+
+    @media screen and (max-width : 991px) {
+        margin-top: 40px;
+    }
+
+    .container {
+        @media screen and (max-width : 1025px) {
+            max-width: 100%;
+            padding: 0 26px;
+        }
+    }
+
+    .paw-row {
+        padding: 80px 20px;
+
+        @media screen and (max-width : 1100px) {
+            padding: 58px 20px;
+        }
+    }
+
+    .pawqeris-hero-image {
+        height: 435px;
+        width: 100%;
+        object-fit: contain;
+
+        @media screen and (max-width : 1100px) {
+            height: 350px;
+        }
+
+        @media screen and (max-width : 500px) {
+            height: 280px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.pawqeris-additonal {
+    overflow-x: hidden;
+
+    .additonal-rows {
+        h6 {
+            font-size: 19px;
+            line-height: 26px;
+
+            @media screen and (max-width : 991px) {
+                font-size: 15px;
+                line-height: 21px;
+            }
+
+            @media screen and (max-width : 650px) {
+                font-size: 13px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #22222291;
+
+            @media screen and (max-width : 650px) {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+
+.case-pg {
+    .mob-cas {
+        display: none;
+    }
+
+    .key-technologies-section {
+        .key-tech-rw {
+            gap: 20px;
+            justify-content: center;
+
+            @media screen and (max-width : 550px) {
+                margin: 0 10px;
+                gap: 12px;
+            }
+
+            .tech-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #E6EAF9;
+                padding: 33px;
+                border-radius: 15px;
+
+                 @media screen and (max-width : 1025px) {
+                      padding: 28px;
+                    }
+
+                     @media screen and (max-width : 1025px) {
+                      padding: 22px;
+                    }
+                     @media screen and (max-width : 480px) {
+                      padding: 12px;
+                    }
+
+                img {
+                    width: 90px;
+                    height: 90px;
+                    object-fit: contain;
+
+                    @media screen and (max-width : 1025px) {
+                        width: 77px;
+                        height: 77px;
+                    }
+                    @media screen and (max-width : 1025px) {
+                        width:58px;
+                        height:58px;
+                    }
+
+                        @media screen and (max-width : 1025px) {
+                        width:48px;
+                        height:48px;
+                    }
+                     @media screen and (max-width : 480px) {
+                        width:30px;
+                        height:38px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    /* .nwe-toke-sec-1 {
+        @media screen and (max-width : 550px) {
+            background: transparent !important;
+        }
+
+        .cas-rw {
+            @media screen and (max-width : 550px) {
+                padding: 0 !important;
+            }
+
+            .mob-cas {
+                display: none;
+                padding: 0;
+
+                @media screen and (max-width : 550px) {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    } */
+
+    .case-studies-section {
+        ul {
+            &.nav.case-study-tabs {
+                gap: 15px;
+
+                @media screen and (max-width : 1300px) {
+                    gap: 9px;
+                }
+
+                li {
+                    .nav-link {
+                        background: transparent;
+                        border-radius: 4px;
+                        padding: 10px 20px;
+                        border: none;
+                        transition: all 0.3s ease;
+                        font-size: 14px;
+                        color: #222;
+
+                        &.active,
+                        &:hover {
+                            background: #7F82D5;
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .case-study-image {
+            width: 100%;
+            overflow: hidden;
+            background: #f5f5f5;
+
+            img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+
+        .case-study-list {
+            .case-study-card {
+                text-decoration: none;
+                color: inherit;
+                border: 1px solid #d7d7d7;
+                border-radius: 20px;
+                overflow: hidden;
+                background: #fff;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                .case-study-arrow {
+                    width: 30px;
+                    min-width: 30px;
+                    height: 30px;
+                    background: #7F82D5;
+                    color: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+                    .case-study-arrow {
+                        background: #6563c4;
+                        transform: translateX(3px);
+                    }
+                }
+
+                .case-study-image {
+                    width: 100%;
+                    overflow: hidden;
+                    background: transparent;
+                }
+
+                .case-study-content {
+                    padding: 25px 25px;
+                    gap: 12px;
+                    flex: 1;
+
+                    .case-study-info {
+                        h3 {
+                            font-size: 20px;
+                            font-weight: 900;
+                            color: #000;
+                            margin-bottom: 6px;
+                        }
+
+                        .nw-w-txt-2 {
+                            font-size: 13px;
+                            line-height: 18px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,318 @@
+<%- include('../common-new/header') %>
+
+    <body class="nw-banner-wt-1 case-pg">
+
+        <%- include('../common-new/navbar') %>
+
+            <section class="nwe-toke-sec-1" style="background-image: url('https://assets.clarisco.com/assets/case-study/cas-ban.webp');
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center 56%;">
+                <div class="container overflow-hidden">
+                    <div class="row cas-rw min-vh-100 align-items-center justify-content-center position-relative"
+                        style="z-index: 2;">
+                        <div class="mob-cas">
+                            <img src="https://assets.clarisco.com/assets/case-study/casmb-ban.webp" alt="BLOCKCHAIN">
+                        </div>
+                        <div class="col nwe-toke-min-1 col-lg-7 me-auto mt-0">
+                            <h1 class="nwe-toke-txt-1" data-aos="fade-up">
+                                WE ARCHITECT THE <br /> NEXT-GEN BLOCKCHAIN
+                            </h1>
+                            <p class="nwe-toke-txt-3 col-lg-8 mb-4 " data-aos="fade-up">
+                                To See How We Deliver Real-world Results with Blockchain, Walk through
+                                our Case Studies
+                            </p>
+                            <div data-aos="fade-up">
+                                <button class="nwe-toke-btn-1" data-bs-toggle="modal" data-bs-target="#PopForm">Learn
+                                    More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <% const caseStudies=[
+                {link: "https://www.clarisco.com/case-study/ai-powered-rwa-tokenization-platform-development-case-study"
+                , category: "RWA Tokenization" ,
+                image: "https://assets.clarisco.com/clarisco-images/rwa-tokenization/RWA.webp" ,
+                description: "Know how Clarisco built an AI-powered Real-World Asset Tokenization platform to tokenize real estate and carbon credits."
+                }, {link: "https://www.clarisco.com/case-study/ai-powered-digital-asset-tokenization-platform" ,
+                category: "RWA Tokenization" , image: "/assets/case-study/asset-tokenization/case.webp" ,
+                description: "Know how Clarisco built a multi-asset digital tokenization platform covering private equity, commercial real estate, digital assets, and structured credit instruments as an AI-powered, futuristic system."
+                }, {link: "https://www.clarisco.com/case-study/gold-tokenization-platform" ,
+                category: "RWA Tokenization" , image: "/assets/case-study/gold-tokenization/case.webp" ,
+                description: "How Clarisco engineered a gold tokenization platform for a precious metals company covering vault-backed token issuance, on-chain proof-of-reserve, and a 24/7 global trading terminal. Book a live walkthrough to explore the platform."
+                },
+                {link: "https://www.clarisco.com/case-study/commodity-backed-cryptocurrency-and-token-selling-platform"
+                , category: "Crypto Products" ,
+                image: "https://assets.clarisco.com/clarisco-images/cryptopage/casestudyone.webp" ,
+                description: "Developed a secure commodities-backed cryptocurrency exchange with robust admin controls and a user-friendly interface using Node.js, React.js, and MongoDB."
+                },
+                {link: "https://www.clarisco.com/case-study/crypto-based-payment-gateway-platform-for-online-rummy-game"
+                , category: "Crypto Products" ,
+                image: "https://assets.clarisco.com/clarisco-images/cryptopage/casestudytwo.webp" ,
+                description: "A secure, user-friendly crypto payment gateway was developed for Bitrummy, integrating seamless crypto transactions and robust admin controls."
+                }, {link: "https://www.clarisco.com/case-study/digital-asset-exchange-platform-development" ,
+                category: "Crypto Products" ,
+                image: "https://assets.clarisco.com/clarisco-images/cryptopage/case-banner-card-img.webp" ,
+                description: "A new digital asset exchange was developed to meet client needs for diverse trading options, and robust security, boosting user engagement and regulatory compliance."
+                }, {link: "https://www.clarisco.com/case-study/advanced-cryptocurrency-exchange-solution" ,
+                category: "Crypto Products" ,
+                image: "https://assets.clarisco.com/clarisco-images/newcryptocurrency/Advanced-crypto.webp" ,
+                description: "All-new cryptocurrency exchange built with P2P trading, staking, and advanced security features, supporting a wide range of cryptocurrencies for secure transactions."
+                }, {link: "https://www.clarisco.com/case-study/blockchain-ecosystem-development-solution" ,
+                category: "Blockchain Solutions" ,
+                image: "https://assets.clarisco.com/clarisco-images/newcryptocurrency/Newblockchains-ecosystem.webp" ,
+                description: "Created a comprehensive blockchain ecosystem alike EtherScan with DeFi advantage, POS model, and cross-chain abilities with top-notch security."
+                }, {link: "https://www.clarisco.com/case-study/best-multi-crypto-blockchain-explorer-platform" ,
+                category: "Blockchain Solutions" ,
+                image: "https://assets.clarisco.com/clarisco-images/newcryptocurrency/Multi-crypto.webp" ,
+                description: "Developed a cutting-edge Blockchain explorer with a user-friendly interface and important features to increase productivity, and transparency among users."
+                }, {link: "https://www.clarisco.com/case-study/blockchain-solutions-futuristic-transactions" ,
+                category: "Blockchain Solutions" ,
+                image: "https://assets.clarisco.com/clarisco-images/newcasestudy/futuristics-transaction.webp" ,
+                description: "We developed BKC Blockchain, improving transaction productivity, user acceptance, and flawless DeFi operations with low fees and high speed."
+                }, {link: "https://www.clarisco.com/case-study/mlm-revolution-with-clarisco" ,
+                category: "Blockchain Solutions" ,
+                image: "https://assets.clarisco.com/clarisco-images/newcasestudy/Mlm.webp" ,
+                description: "BKC MLM has a 10-level income structure, staking, referrals, and global prizes which provides transparency, rewards, and community."
+                }, {link: "https://www.clarisco.com/case-study/secure-blockchain-solutions-for-business" ,
+                category: "Blockchain Solutions" ,
+                image: "https://assets.clarisco.com/clarisco-images/newcasestudy/Business-secure.webp" ,
+                description: "D-Chain delivers decentralized,customizable blockchain solutions with smart contracts, security, and a native cryptocurrency."
+                }, {link: "https://www.clarisco.com/case-study/neo-banking-solutions-with-fiat-crypto-integration" ,
+                category: "FinTech Platforms" ,
+                image: "https://assets.clarisco.com/clarisco-images/cryptopage/neo-casestudy/neo-banking-revolution.webp",
+                description: "Learn how we developed a fully digital neo-bank, and transformed banking in Canada with secure, low-cost crypto and fiat services."
+                }, {link: "https://www.clarisco.com/case-study/zuriva-digital-banking-platform" ,
+                category: "FinTech Platforms" ,
+                image: "https://assets.clarisco.com/assets/case-study/Zuriva.webp",
+                description: "See how Zuriva brings wallets, cards, mobile money, and secure crypto together for banks, fintechs, and everyday users across the continent."
+                }, { link: "https://www.clarisco.com/case-study/pawqeris-pet-digital-identity" ,
+                category: "AI-Powered Solutions" , image: "https://assets.clarisco.com/assets/case-study/Pawqeris.webp" ,
+                description: "Every pet deserves a trusted identity. See how Pawqeris gives pets records, vet bookings, and a community under one secure digital ID."
+                }, { link: "http://localhost:3000/case-study/novaryx-blockchain-ai-agent" ,
+                category: "AI-Powered Solutions" , image: "https://assets.clarisco.com/assets/case-study/Novaryx.webp" ,
+                description: "What if your AI could order, book, and research for you, and prove every step? See how Novaryx pairs a capable agent with blockchain."
+                }, { link: "https://www.clarisco.com/case-study/pulsora-fitness-rewards-platform" ,
+                category: "AI-Powered Solutions" , image: "https://assets.clarisco.com/assets/case-study/pulsora.webp" ,
+                description: "Run, ride, lift, earn. See how Pulsora turned everyday workouts into points, AI coaching, and a community of athletes, coaches, and clubs."
+                },]; %>
+
+                <section class="case-studies-section py-5">
+                    <div class="container">
+
+                        <!-- Section Header -->
+                        <div class="text-center mb-4">
+                            <h2 class="nwe-toke-txt-1">CASE STUDIES</h2>
+                        </div>
+
+                        <!-- Tabs -->
+                        <ul class="nav nav-pills justify-content-center case-study-tabs mb-5">
+
+                            <li class="nav-item">
+                                <button class="nav-link active" type="button" data-category="All">
+                                    All Projects
+                                </button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-category="RWA Tokenization">
+                                    RWA Tokenization
+                                </button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-category="AI-Powered Solutions">
+                                    AI-Powered Solutions
+                                </button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-category="Crypto Products">
+                                    Crypto Products
+                                </button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-category="Blockchain Solutions">
+                                    Blockchain Solutions
+                                </button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-category="FinTech Platforms">
+                                    FinTech Platforms
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Case Study Cards -->
+                        <div class="row case-study-list">
+
+                            <% caseStudies.forEach(function(item) { %>
+
+                                <div class="col-lg-4 col-md-6 col-12 mb-4 case-study-item"
+                                    data-category="<%= item.category %>">
+
+                                    <a href="<%= item.link %>" target="_blank"
+                                        class="case-study-card d-flex flex-column h-100">
+
+                                        <div class="case-study-image">
+                                            <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid"
+                                                loading="lazy">
+                                        </div>
+
+                                        <div
+                                            class="case-study-content d-flex align-items-center justify-content-between">
+
+                                            <div class="case-study-info">
+                                                <h3>
+                                                    <%= item.title %>
+                                                </h3>
+                                                <p class="nw-w-txt-2">
+                                                    <%= item.description %>
+                                                </p>
+                                            </div>
+
+                                            <div class="case-study-arrow flex-shrink-0">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                </div>
+
+                                <% }) %>
+
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <section class="key-technologies-section py-2 py-md-3 py-lg-5">
+                    <div class="container">
+                        <h3 class="nwe-toke-txt-1 text-center mb-2 mb-md-4">
+                            Key Technologies
+                        </h3>
+                        <div class="row key-tech-rw pt-4">
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech1.webp" alt="Technology 1">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech2.webp" alt="Technology 2">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech3.webp" alt="Technology 3">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech4.webp" alt="Technology 4">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech5.webp" alt="Technology 5">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech6.webp" alt="Technology 6">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech7.webp" alt="Technology 7">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech8.webp" alt="Technology 8">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech9.webp" alt="Technology 9">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech10.webp" alt="Technology 10">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech11.wepb" alt="Technology 11">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech12.webp" alt="Technology 12">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech13.webp" alt="Technology 13">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech14.webp" alt="Technology 14">
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 tech-img col-3">
+                                <img src="https://assets.clarisco.com/assets/case-study/ctech15.webp" alt="Technology 15">
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- Category Filtering -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+
+                        const tabs = document.querySelectorAll(".case-study-tabs .nav-link");
+                        const cards = document.querySelectorAll(".case-study-item");
+
+                        tabs.forEach(function (tab) {
+
+                            tab.addEventListener("click", function () {
+
+                                tabs.forEach(function (item) {
+                                    item.classList.remove("active");
+                                });
+
+                                this.classList.add("active");
+
+                                const category = this.dataset.category;
+
+                                cards.forEach(function (card) {
+
+                                    card.style.display =
+                                        category === "All" || card.dataset.category === category
+                                            ? ""
+                                            : "none";
+
+                                });
+
+                            });
+
+                        });
+
+                    });
+                </script>
+
+                <%- include('../common-new/footer') %>
+                    <script>
+                        $(document).ready(function () {
+                            $(window).scroll(function () {
+                                var wscroll = $(this).scrollTop();
+                                if (wscroll > 50) {
+                                    $(".top-newbar-section .navbar").css("background-color", "rgb(249 251 255)");
+                                }
+                                else {
+                                    $(".top-newbar-section .navbar").css("background-color", "transparent");
+                                }
+                            });
+                        });
+                    </script>
+    </body>
+
+    </html>

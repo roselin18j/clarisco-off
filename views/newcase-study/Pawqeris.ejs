@@ -1,0 +1,754 @@
+<%- include('../common-new/header') %>
+
+    <body class="nw-banner-wt-1">
+
+        <%- include('../common-new/navbar') %>
+
+            <section class="pawqeris-hero">
+                <div class="container-fluid">
+                    <div class="row  pawqeris-hero-row align-items-center justify-content-center">
+
+                        <div class="col-lg-4 col-md-6 text-start">
+                            <h1 class="pawqeris-hero-title mb-3">
+                                Pawqeris: A Decentralized Digital Identity and Care Ecosystem for Pets
+                            </h1>
+
+                            <a href="jacascript:void(0)" data-bs-toggle="modal" data-bs-target="#PopForm" class="btn pawqeris-hero-btn">
+                                Click Now
+                            </a>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 text-center hero-img">
+                            <img src="https://assets.clarisco.com/assets/case-study/paw-1.webp"
+                                alt="Pawqeris Pet Identity and Care Ecosystem" class="img-fluid pawqeris-hero-image">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pawqeris-snapshot py-5">
+                <div class="container">
+
+                    <h2 class="text-center case-htags fw-bold mb-4">
+                        Project Snapshot
+                    </h2>
+                    <img src="https://assets.clarisco.com/assets/case-study/paw-mob2.webp" alt="Pawqeris Project Snapshot"
+                        class="mob-img">
+
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="lftProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Project</h6>
+                                <p>Pawqeris</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item paw-two">
+                                <h6>Industry</h6>
+                                <p>Pet Care, Web3, Digital Identity</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Platform</h6>
+                                <p>iOS and Android apps, plus a web dashboard for professionals</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center cenImg-item p-0">
+                            <img src="https://assets.clarisco.com/assets/case-study/paw-2.webp" alt="Pawqeris Project Snapshot"
+                                class="img-fluid">
+
+                        </div>
+
+                        <div class="rytProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Users</h6>
+                                <p>Pet owners, vets, groomers, breeders, shelters, vendors</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item paw-two">
+                                <h6>Core Technology</h6>
+                                <p>Decentralized ID (DID), Blockchain, NFTs, IoT, AI</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Delivered by</h6>
+                                <p>Clarisco Solutions</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pawqeris-overview py-3 py-lg-5 py-md-4">
+                <div class="container">
+
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-10">
+
+
+
+                            <h2 class="case-htags mb-3">
+                                Overview
+                            </h2>
+
+                            <p class="pawqeris-overview-text col-lg-8 mx-auto">
+                                Pawqeris is a pet-care platform that puts a pet's whole life story in one trusted place.
+                                Owners and professionals can record, view, share, and pass on everything from birth
+                                details and vaccinations to DNA results and ownership history.
+                            </p>
+
+                            <p class="pawqeris-overview-text">
+                                Every pet receives its own Decentralized ID (DID). This one identity ties the app
+                                together, so health records, bookings, wearable readings, payments, and community
+                                activity all attach to the same verified profile, with the owner in charge.
+                            </p>
+
+                            <p class="pawqeris-overview-text mb-4">
+                                Clarisco Solutions handled the project from the initial discussion to launch.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 col-md-9 col-11 text-center">
+                            <img src="https://assets.clarisco.com/assets/case-study/paw-3.webp"
+                                alt="Pawqeris Pet Care Platform Overview" class="img-fluid pawqeris-overview-image">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <% const challengeData=[ { title: "Records everywhere" ,
+                description: "Vaccination cards, certificates, and pedigree papers live in drawers, clinic software, and old chats."
+                }, { title: "Doubtful authenticity" ,
+                description: "Documents can be edited or forged, which creates friction in adoption, breeding, travel, and resale."
+                }, { title: "No clear handover" ,
+                description: "Moving a pet to a new owner lacks a standard, provable process." }, {
+                title: "Fragmented services" ,
+                description: "Booking care, buying products, monitoring health, and learning all happen in different places."
+                }, { title: "Few ways to give back" ,
+                description: "People who want to back shelters, research, or events lack transparent options." } ]; %>
+
+                <section class="pawqeris-challenge py-5">
+                    <div class="container">
+
+                        <div class="text-center mb-4">
+                            <h2 class="case-htags mb-3">The Challenge</h2>
+                            <p class="pawqeris-challenge-description">
+                                Pet data is scattered and easy to lose or dispute.
+                                Our discovery sessions with owners, vets, and shelters
+                                surfaced five core problems:
+                            </p>
+                        </div>
+
+                        <% challengeData.forEach((item)=> { %>
+                            <div
+                                class="pawqeris-challenge-item d-flex align-items-stretch mb-2 mb-lg-3 col-lg-11 mx-auto">
+
+                                <b
+                                    class="pawqeris-challenge-label d-flex align-items-center justify-content-center text-center">
+                                    <%= item.title %>
+                                </b>
+
+                                <p class="pawqeris-challenge-content d-flex align-items-center">
+                                    <%= item.description %>
+                                </p>
+
+                            </div>
+                            <% }) %>
+
+                    </div>
+                </section>
+
+
+                <% const objectivesData=[ "Issue each pet a tamper-proof identity controlled by its owner."
+                    , "Let records be shared and transferred easily and safely."
+                    , "Combine care, shopping, community, and charity in one experience."
+                    , "Use AI and wearables to catch health issues early."
+                    , "Keep the platform secure and easy for non-technical users." ]; const solutionData={
+                    title: "Our Solution" ,
+                    description: "Our design principle was simple: the pet's identity comes first, and every feature draws from it. Whether an entry comes from a vet, a breeder, or a smart collar, it lands on the same trusted profile."
+                    }; %>
+
+
+
+                    <section class="pawqeris-objectives py-4 py-lg-5">
+                        <div class="container">
+
+                            <div class="row pawqeris-obj-row align-items-start position-relative g-0">
+
+                                <!-- Curve divider -->
+                                <div class="pawqeris-objectives-curve d-none d-md-block">
+                                    <img src="https://assets.clarisco.com/assets/case-study/curve.webp" alt="" class="img-fluid">
+                                </div>
+
+                                <!-- Objectives -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-left">
+
+
+                                        <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                            Objectives
+                                        </h2>
+
+                                        <div class="pawqeris-objectives-line mb-3"></div>
+
+                                        <p class="pawqeris-objectives-intro mb-3 mb-md-4 mb-lg-4">
+                                            To achieve our goals, we focus on creating a seamless
+                                            and meaningful experience that drives real value.
+                                        </p>
+
+                                        <ol class="pawqeris-objectives-list list-unstyled mb-0">
+                                            <% objectivesData.forEach((objective, index)=> { %>
+                                                <li class="d-flex align-items-start mb-2 mb-lg-3 mb-md-3">
+                                                    <span class="pawqeris-objective-number me-3">
+                                                        <%= String(index + 1).padStart(2, '0' ) %>.
+                                                    </span>
+
+                                                    <span class="pawqeris-objective-text">
+                                                        <%= objective %>
+                                                    </span>
+                                                </li>
+                                                <% }) %>
+                                        </ol>
+
+                                    </div>
+
+
+                                <!-- Our Solution -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-right">
+
+
+                                        <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                            <%= solutionData.title %>
+                                        </h2>
+
+                                        <div class="pawqeris-objectives-line mb-3"></div>
+
+                                        <p class="pawqeris-solution-description mb-4">
+                                            <%= solutionData.description %>
+                                        </p>
+
+                                        <div class="pawqeris-solution-highlight text-center">
+                                            "Every pet deserves an identity that can't be lost or altered. We built
+                                            Pawqeris so one trusted profile follows a pet through every vet visit,
+                                            adoption, and new home."
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <% const primaryFeaturesData=[ { title: "Pet NFTs" ,
+                        description: "A unique token representing the pet and pointing to its verified records." }, {
+                        title: "Pet Identification" ,
+                        description: "Name, photos, microchip and tag numbers, and identifying marks, tied to the DID."
+                        }, { title: "Birth Records" ,
+                        description: "Birth date, location, litter, and breeder information." }, {
+                        title: "Ancestry and DNA Data" ,
+                        description: "Breed mix, lineage, and genetic findings, visible only with the owner's approval."
+                        }, { title: "Vaccination Records" ,
+                        description: "Vet-confirmed shots with automatic reminders for upcoming doses." }, {
+                        title: "Health Certificates" ,
+                        description: "Digitally issued, checkable certificates for travel, boarding, breeding, and adoption."
+                        }, { title: "Ownership History" ,
+                        description: "A dated chain of owners, with secure, auditable transfers." } ]; %>
+
+                        <section class="pawqeris-primary-features  py-5">
+                            <div class="container">
+
+                                <div class="text-center mb-4">
+                                    <h2 class="case-htags mb-2">
+                                        Primary Features
+                                    </h2>
+
+                                    <p class="pawqeris-features-description mb-2">
+                                        Trusted, Tamper-Resistant Pet Records
+                                    </p>
+
+                                    <p class="pawqeris-features-description mb-0">
+                                        Core data is anchored on the blockchain, so anyone can verify an entry,
+                                        but no one can quietly change it. The record vault holds:
+                                    </p>
+                                </div>
+
+                                <div class="mt-2 col-lg-11 mx-auto row justify-content-center align-items-start g-4">
+
+                                    <div class="col-lg-5 col-md-5">
+                                        <img src="https://assets.clarisco.com/assets/case-study/paw-4.webp"
+                                            alt="Pawqeris Primary Features" class="img-fluid pawqeris-features-image">
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7">
+                                        <ul class="pawqeris-features-list mb-0">
+                                            <% primaryFeaturesData.forEach((item)=> { %>
+                                                <li class="pawqeris-feature-item">
+                                                    <h6>
+                                                        <%= item.title %>
+                                                    </h6>
+                                                    <p>
+                                                        <%= item.description %>
+                                                    </p>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <% const bookingData={ title: "Quick Vet and Grooming Bookings" ,
+                            description: "Owners find and book vets and groomers in a few taps, with live availability, confirmations, and reminders. Providers manage their schedule from a dashboard, see shared records before each visit, and log updates afterwards."
+                            }; const secondaryFeaturesData=[ { title : "Pack Circle" ,
+                            description: "A lively community for sharing stories, photos, and tips, with groups organised by breed or area."
+                            }, { title: "Knowledge Corner" ,
+                            description: "Articles, guides and videos on training, nutrition, behaviour and health, written or reviewed by verified professionals."
+                            }, { title: "Marketplace" ,
+                            description: "A storefront that introduces owners to trusted vendors, with suggestions matched to the pet's breed, age and health."
+                            }, { title: "Smart Wearable Sync" ,
+                            description: "Collars and trackers feed activity, sleep, heart rate, and location into the profile, and the app alerts owners when readings look unusual."
+                            }, { title: "Pawqeris AI Guide" ,
+                            description: "A chat assistant that answers care questions, explains health trends, spots early warning signs, and points owners to nearby professionals when needed."
+                            }, { title: "Rainbow Bridge Memorial" ,
+                            description: "A calm, respectful corner for remembering pets who have passed, with galleries and tributes."
+                            }, { title: "Pet Future Fund" ,
+                            description: "Planning tools for setting money aside for medical care, insurance, and long-term needs."
+                            }, { title: "Virtual Adoption" ,
+                            description: "Users sponsor, name, and follow a pet remotely and receive regular updates, with no need to take the animal home. It suits people who cannot keep a pet."
+                            }, { title: "Shelter Giving" ,
+                            description: "Tokens can be donated to verified shelters and charities, with clear updates on how the money was used."
+                            }, { title: "Pet Health Crowdfunding" ,
+                            description: "Community campaigns where users pool tokens for pet health research and animal welfare work, with progress visible to all."
+                            }, { title: "Events and Sponsorships" ,
+                            description: "Entry to online and on-site pet events such as adoption drives, expos, and wellness camps, plus sponsorship options for brands."
+                            } ]; %>
+
+                            <section class="pawqeris-booking-features col-lg-9 mx-auto  py-3 py-lg-5 py-md-4">
+                                <div class="container">
+
+                                    <div class="row col-lg-10 justify-content-start mb-4">
+                                        <div class="w-100">
+                                            <h2 class="pawqeris-booking-title mb-2">
+                                                <%= bookingData.title %>
+                                            </h2>
+
+                                            <p class="pawqeris-booking-description mb-0">
+                                                <%= bookingData.description %>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row justify-content-center">
+                                        <div class="w-100">
+
+                                            <h3 class="pawqeris-secondary-title mb-3">
+                                                Secondary Features
+                                            </h3>
+
+                                            <div class="pawqeris-secondary-card">
+                                                <% secondaryFeaturesData.forEach((item)=> { %>
+                                                    <div class="pawqeris-secondary-item d-flex align-items-start">
+                                                        <div class="pawqeris-secondary-label">
+                                                            <h6 class="mb-2">
+                                                                <%= item.title %>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="pawqeris-secondary-content">
+                                                            <p class="mb-0">
+                                                                <%= item.description %>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="pawqeris-additonal py-5">
+                                <div class="container">
+
+                                    <div class="row col-lg-7 mx-auto mb-lg-4 mb-md-3 mb-2">
+                                        <div class="col-12 text-center">
+                                            <h2 class="case-htags">Additional Features Added by Clarisco</h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-5 additonal-rows justify-content-center mt-lg-4 mt-md-3 mt-2">
+
+                                        <!-- Left Column -->
+                                        <div class="col-lg-6 mt-lg-4 mt-md-3 mt-2">
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5 ">
+                                                <h6 class="fw-bold">Lost Pet Alerts and Recovery:</h6>
+                                                <p class="mb-0">
+                                                    A one-tap report notifies nearby users, shelters, and vets. QR and
+                                                    NFC tags open a safe public profile that keeps owner details
+                                                    private.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Smart Health Reminders:</h6>
+                                                <p class="mb-0">
+                                                    Alerts for vaccines, deworming, medication, check-ups, and grooming.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Multi-Pet and Family Access:</h6>
+                                                <p class="mb-0">
+                                                    Several pets per account, with permission levels for family,
+                                                    sitters, and walkers.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Consent-Based Data Sharing:</h6>
+                                                <p class="mb-0">
+                                                    Owners decide what to share, with whom, and for how long, and can
+                                                    withdraw access anytime.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Pet Insurance Integration:</h6>
+                                                <p class="mb-0">
+                                                    Compare plans, buy cover, and file claims backed by verified
+                                                    records.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-0">
+                                                <h6 class="fw-bold">Breeder and Shelter Verification:</h6>
+                                                <p class="mb-0">
+                                                    Credential checks and badges that build trust and deter fraud.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Right Column -->
+                                        <div class="col-lg-6 mt-md-4 mt-lg-4 mt-md-3 mt-2">
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Travel Document Wizard:</h6>
+                                                <p class="mb-0">
+                                                    Step-by-step checklists and exportable certificates for local and
+                                                    international trips.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Nutrition and Weight Tracking:</h6>
+                                                <p class="mb-0">
+                                                    Tailored diet plans, feeding logs, and growth charts.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Pet Services Directory:</h6>
+                                                <p class="mb-0">
+                                                    Trainers, walkers, boarders and sitters with verified reviews.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Rewards and Gamification:</h6>
+                                                <p class="mb-0">
+                                                    Tokens and badges for healthy habits, community activity, and
+                                                    giving.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Multilingual Support and Accessibility:</h6>
+                                                <p class="mb-0">
+                                                    Regional languages and accessible design.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-0">
+                                                <h6 class="fw-bold">Admin and Analytics Console:</h6>
+                                                <p class="mb-0">
+                                                    Moderation, onboarding, shelter verification, campaign approvals,
+                                                    and insights for the platform team.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <% const technologyApproachData=[ { layer: "Identity" ,
+                                approach: "A DID per pet, with verifiable credentials issued by authorities" }, {
+                                layer: "Blockchain" , approach: "Record anchoring, NFT minting, and token donations" },
+                                { layer: "Mobile and Web" , approach: "Cross-platform apps and a professional dashboard"
+                                }, { layer: "Backend" , approach: "Cloud services, secure APIs, and role-based access"
+                                }, { layer: "AI" ,
+                                approach: "Conversational guide with health-trend analysis and referral logic" }, {
+                                layer: "IoT" ,
+                                approach: "Wearable and smart collar integrations for continuous health data" }, {
+                                layer: "Security" ,
+                                approach: "End-to-end encryption, multi-factor login, and audit trails" } ]; %>
+
+
+                                <section class="pawqeris-technology py-3 py-lg-5 py-md-4">
+                                    <div class="container">
+
+                                        <h2 class="case-htags text-center mb-3 mb-lg-4 mb-md-4">
+                                            Our Technology Approach
+                                        </h2>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8 col-md-10">
+
+                                                <div class="table-responsive">
+                                                    <div class="pawqeris-technology-table">
+
+                                                        <div class="row g-0 pawqeris-technology-header">
+                                                            <div class="col-3 text-center">Layer</div>
+                                                            <div class="col-9 text-center">Approach</div>
+                                                        </div>
+
+                                                        <% technologyApproachData.forEach((item)=> { %>
+                                                            <div class="row g-0 pawqeris-technology-row">
+                                                                <div class="col-3">
+                                                                    <div class="pawqeris-technology-layer">
+                                                                        <p>
+                                                                            <%= item.layer %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-9">
+                                                                    <div class="pawqeris-technology-approach">
+                                                                        <p>
+                                                                            <%= item.approach %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
+
+                                <% const processData=[ { title: "Discovery" ,
+                                    description: "Interviews and workflow mapping with owners, vets, shelters, and vendors."
+                                    }, { title: "Strategy" ,
+                                    description: "Features grouped into core, secondary, and value-add, with a phased roadmap."
+                                    }, { title: "Design" ,
+                                    description: "Warm, intuitive interfaces tested with real users before development."
+                                    }, { title: "Development" ,
+                                    description: "Agile sprints covering DID infrastructure, smart contracts, apps, dashboards, and integrations."
+                                    }, { title: "Testing" ,
+                                    description: "Functional, performance, and penetration testing, plus a smart contract review."
+                                    }, { title: "Launch" ,
+                                    description: "A staged rollout, early provider and shelter onboarding, and ongoing refinement from feedback."
+                                    } ]; %>
+
+                                    <section class="pawqeris-process py-5">
+                                        <div class="container">
+
+                                            <h2 class="case-htags text-center mb-4">
+                                                Our Process
+                                            </h2>
+
+                                            <div
+                                                class="row align-items-center justify-content-center col-lg-12 mx-auto">
+
+                                                <!-- Process Steps -->
+                                                <div class="col-lg-6 col-md-7">
+                                                    <div class="pawqeris-process-list">
+
+                                                        <% processData.forEach((item)=> { %>
+                                                            <div class="pawqeris-process-item mb-3 mb-md-4 mb-lg-4">
+
+                                                                <h6 class="pawqeris-process-item-title mb-2">
+                                                                    <%= item.title %>:
+                                                                </h6>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <%= item.description %>
+                                                                </p>
+
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Process Image -->
+                                                <div class="col-lg-5 col-md-5 text-center">
+                                                    <img src="https://assets.clarisco.com/assets/case-study/paw-5.webp"
+                                                        alt="Pawqeris Development Process"
+                                                        class="img-fluid pawqeris-process-image">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </section>
+
+
+                                    <% const challengeData1=[ { title: "Transparency versus privacy" ,
+                                        description: "Proof of integrity sits on-chain, while sensitive details stay encrypted and shared only with consent."
+                                        }, { title: "Keeping Web3 invisible" ,
+                                        description: "Wallets, tokens, and DIDs work in the background, so users just book, share, and donate."
+                                        }, { title: "Winning over professionals" ,
+                                        description: "A lightweight dashboard lets vets and groomers issue records and handle bookings within their usual routine."
+                                        }, { title: "Earning trust in giving" ,
+                                        description: "Shelters and charities are verified, and every donation and campaign shows its impact."
+                                        } ]; %>
+
+
+                                        <section class="pawqeris-challenge py-3 py-lg-5 py-md-4">
+                                            <div class="container">
+
+                                                <h2 class="case-htags text-center mb-3 mb-lg-5 mb-md-4">
+                                                    Challenges and How We Solved Them
+                                                </h2>
+
+                                                <div class="col-lg-10 mx-auto">
+                                                    <ul class="list-unstyled mb-0">
+
+                                                        <% challengeData1.forEach((item)=> { %>
+                                                            <li class="d-flex align-items-baseline gap-2 mb-3 ">
+
+                                                                <span class="text-secondary">•</span>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <strong class="fw-semibold">
+                                                                        <%= item.title %>
+                                                                    </strong>
+                                                                    - <%= item.description %>
+                                                                </p>
+
+                                                            </li>
+                                                            <% }) %>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </section>
+
+
+                                        <% const
+                                            pawqerisResultsData=[ "One verifiable identity per pet, replacing scattered paperwork."
+                                            , "Faster, safer adoptions and ownership transfers."
+                                            , "Fewer missed vaccines and appointments."
+                                            , "Stronger engagement through community, learning, and shopping."
+                                            , "More visible, accountable support for shelters and pet health research."
+                                            , "New revenue routes for vendors, providers, and sponsors." ]; %>
+
+                                            <section class="pawqeris-results py-5 ">
+                                                <div class="container">
+
+                                                    <div
+                                                        class="d-flex res-row col-lg-11 mx-auto align-items-center justify-content-between gap-4">
+
+                                                        <!-- Left Content -->
+                                                        <div class="pawqeris-results-content col-lg-6 col-md-7">
+
+                                                            <h2 class="case-htags fw-bold mb-4">
+                                                                Results and Impact of Pawqeris
+                                                            </h2>
+
+                                                            <ul class="list-unstyled mb-0">
+                                                                <% pawqerisResultsData.forEach((item)=> { %>
+                                                                    <li
+                                                                        class="d-flex align-items-baseline gap-2 mb-3 mb-md-2">
+                                                                        <span class="text-secondary">•</span>
+                                                                        <p class="pawqeris-results-text mb-0">
+                                                                            <%= item %>
+                                                                        </p>
+                                                                    </li>
+                                                                    <% }) %>
+                                                            </ul>
+
+                                                        </div>
+
+                                                        <div
+                                                            class="pawqeris-results-image-wrapper col-lg-5 col-md-5 text-center">
+                                                            <img src="https://assets.clarisco.com/assets/case-study/paw-6.webp"
+                                                                alt="Pawqeris Results and Impact"
+                                                                class="img-fluid pawqeris-results-image">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </section>
+
+
+                                            <section class="pawqeris-conclusion py-3 py-lg-5 py-md-4 col-lg-9 mx-auto">
+                                                <div class="container">
+
+                                                    <h2 class="case-htags fw-bold mb-3">
+                                                        Conclusion
+                                                    </h2>
+
+                                                    <p class="pawqeris-conclusion-text mb-2 mb-lg-4 mb-md-3">
+                                                        Pawqeris shows how Decentralized Identity and careful product
+                                                        design can bring order to an industry run on paper. By pairing
+                                                        every pet with a trusted digital identity and building care,
+                                                        commerce, community, and compassion around it, the platform
+                                                        makes pet ownership safer, smarter, and more connected.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-2 mb-lg-4 mb-md-3">
+                                                        At Clarisco Solutions, we pair technical depth with a user-first
+                                                        approach to turn bold ideas like Pawqeris into products people
+                                                        use daily.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-0">
+                                                        Planning a platform like Pawqeris? Talk to Clarisco Solutions.
+                                                    </p>
+
+                                                </div>
+                                            </section>
+
+
+                                            <%- include('../common-new/footer') %>
+
+                                                            <script>
+                                                                $(document).ready(function () {
+                                                                    $(window).scroll(function () {
+                                                                        var wscroll = $(this).scrollTop();
+                                                                        if (wscroll > 50) {
+                                                                            $(".top-newbar-section .navbar").css("background-color", "rgb(249 251 255)");
+                                                                        }
+                                                                        else {
+                                                                            $(".top-newbar-section .navbar").css("background-color", "transparent");
+                                                                        }
+                                                                    });
+                                                                });
+                                                            </script>
+    </body>
+
+    </html>

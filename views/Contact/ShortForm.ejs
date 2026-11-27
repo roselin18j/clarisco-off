@@ -1,0 +1,358 @@
+<form
+  class="small-contact-form mt-2"
+  id="smallContactForm"
+  novalidate
+  autocomplete="off"
+>
+  <div class="input-group mb-2">
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      autocomplete="off"
+      required
+    />
+    <label class="validation-error" id="nameError"></label>
+  </div>
+
+  <div class="input-group mb-2">
+    <input
+      type="tel"
+      name="mob_phone"
+      placeholder="Phone"
+      maxlength="10"
+      inputmode="numeric"
+      autocomplete="off"
+      required
+    />
+    <label class="validation-error" id="phoneError"></label>
+  </div>
+
+  <div class="input-group mb-2">
+    <input
+      type="email"
+      name="email"
+      id="smallContactEmail"
+      placeholder="Email"
+      autocomplete="off"
+      required
+    />
+    <label class="validation-error" id="smallContactEmailError"></label>
+  </div>
+
+  <div class="input-group mb-2">
+    <textarea
+      name="message"
+      placeholder="Message"
+      rows="4"
+      autocomplete="off"
+      required
+    ></textarea>
+    <label class="validation-error" id="messageError"></label>
+  </div>
+
+  <div class="mb-2" id="recaptchaContainer" style="display: none">
+    <div id="shortFormRecaptcha"></div>
+    <label class="validation-error" id="recaptchaError"></label>
+  </div>
+
+  <button type="submit" class="nw-w-bann-1" id="smallContactSubmit">
+    Submit
+  </button>
+
+  <div id="formSuccess" class="form-success"></div>
+  <div id="formError" class="form-error"></div>
+</form>
+
+<style>
+  .validation-error {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    color: #dc3545;
+    font-size: 13px;
+  }
+
+  .input-error {
+    border: 1px solid #dc3545 !important;
+  }
+
+  #recaptchaError {
+    display: none;
+  }
+
+  #recaptchaError.show {
+    display: block;
+  }
+
+  .form-success {
+    display: none;
+    margin-top: 10px;
+    color: #198754;
+    font-size: 14px;
+  }
+
+  .form-error {
+    display: none;
+    margin-top: 10px;
+    color: #dc3545;
+    font-size: 14px;
+  }
+</style>
+
+
+
+<script>
+  let captchaCompleted = false;
+  let captchaToken = "";
+
+  function recaptchaCompleted(token) {
+    captchaCompleted = true;
+    captchaToken = token || "";
+
+    const recaptchaError = document.getElementById("recaptchaError");
+
+    if (recaptchaError) {
+      recaptchaError.textContent = "";
+      recaptchaError.classList.remove("show");
+    }
+
+    const form = document.getElementById("smallContactForm");
+
+    if (form) {
+      form.requestSubmit();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("smallContactForm");
+
+    if (!form) return;
+
+    const nameInput = form.elements["name"];
+    const phoneInput = form.elements["mob_phone"];
+    const emailInput = form.elements["email"];
+    const messageInput = form.elements["message"];
+
+    const nameError = document.getElementById("nameError");
+    const phoneError = document.getElementById("phoneError");
+    const emailError = document.getElementById("smallContactEmailError");
+    const messageError = document.getElementById("messageError");
+
+    const recaptchaContainer = document.getElementById("recaptchaContainer");
+    const recaptchaError = document.getElementById("recaptchaError");
+
+    const formSuccess = document.getElementById("formSuccess");
+    const formError = document.getElementById("formError");
+
+    const submitButton = document.getElementById("smallContactSubmit");
+
+    function clearFieldError(input, errorElement) {
+      if (errorElement) {
+        errorElement.textContent = "";
+      }
+
+      if (input) {
+        input.classList.remove("input-error");
+      }
+    }
+
+    function clearValidationErrors() {
+      clearFieldError(nameInput, nameError);
+      clearFieldError(phoneInput, phoneError);
+      clearFieldError(emailInput, emailError);
+      clearFieldError(messageInput, messageError);
+
+      if (recaptchaError) {
+        recaptchaError.textContent = "";
+        recaptchaError.classList.remove("show");
+      }
+    }
+
+    function clearMessages() {
+      if (formSuccess) {
+        formSuccess.textContent = "";
+        formSuccess.style.display = "none";
+      }
+
+      if (formError) {
+        formError.textContent = "";
+        formError.style.display = "none";
+      }
+    }
+
+    nameInput.addEventListener("input", function () {
+      clearFieldError(nameInput, nameError);
+    });
+
+    phoneInput.addEventListener("input", function () {
+      this.value = this.value.replace(/\D/g, "");
+      clearFieldError(phoneInput, phoneError);
+    });
+
+    emailInput.addEventListener("input", function () {
+      clearFieldError(emailInput, emailError);
+    });
+
+    messageInput.addEventListener("input", function () {
+      clearFieldError(messageInput, messageError);
+    });
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+
+
+      clearValidationErrors();
+      clearMessages();
+
+      let isValid = true;
+
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const email = emailInput.value.trim();
+      const message = messageInput.value.trim();
+
+      if (!name) {
+        nameError.textContent = "Name is required";
+        nameInput.classList.add("input-error");
+        isValid = false;
+      } else if (name.length < 2) {
+        nameError.textContent = "Name must be at least 2 characters";
+        nameInput.classList.add("input-error");
+        isValid = false;
+      }
+
+      if (!phone) {
+        phoneError.textContent = "Phone number is required";
+        phoneInput.classList.add("input-error");
+        isValid = false;
+      } else if (!/^[0-9]{10}$/.test(phone)) {
+        phoneError.textContent = "Phone number must be 10 digits";
+        phoneInput.classList.add("input-error");
+        isValid = false;
+      }
+
+      if (!email) {
+        emailError.textContent = "Email is required";
+        emailInput.classList.add("input-error");
+        isValid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        emailError.textContent = "Please enter a valid email address";
+        emailInput.classList.add("input-error");
+        isValid = false;
+      }
+
+      if (!message) {
+        messageError.textContent = "Message is required";
+        messageInput.classList.add("input-error");
+        isValid = false;
+      } else if (message.length < 10) {
+        messageError.textContent = "Message must be at least 10 characters";
+        messageInput.classList.add("input-error");
+        isValid = false;
+      }
+
+      if (!isValid) {
+        return;
+      }
+
+      if (!captchaCompleted) {
+        recaptchaContainer.style.display = "block";
+
+        recaptchaError.textContent = "Please verify that you are not a robot.";
+
+        recaptchaError.classList.add("show");
+
+        return;
+      }
+
+      let captchaResponse = captchaToken;
+
+      if (!captchaResponse) {
+        recaptchaError.textContent = "Please verify that you are not a robot.";
+
+        recaptchaError.classList.add("show");
+
+        captchaCompleted = false;
+
+        return;
+      }
+
+      const formData = {
+        name: name,
+        mob_phone: phone,
+        email: email,
+        message: message,
+        "g-recaptcha-response": captchaResponse,
+      };
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+
+      try {
+        const response = await fetch("/blog-small-form", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.status === true) {
+          formSuccess.textContent =
+            result.message ||
+            "Thank you for contacting us. We will contact you ASAP!";
+
+          formSuccess.style.display = "block";
+
+          form.reset();
+
+          captchaCompleted = false;
+
+          if (typeof grecaptcha !== "undefined") {
+            grecaptcha.reset(window.shortFormWidgetId);
+          }
+          captchaToken = "";
+
+          recaptchaContainer.style.display = "none";
+
+          clearValidationErrors();
+        } else {
+          formError.textContent =
+            result.message || "Something went wrong. Please try again.";
+
+          formError.style.display = "block";
+
+          captchaCompleted = false;
+
+          if (typeof grecaptcha !== "undefined") {
+            grecaptcha.reset(window.shortFormWidgetId);
+          }
+          captchaToken = "";
+
+          recaptchaContainer.style.display = "none";
+        }
+      } catch (error) {
+        formError.textContent = "Unable to submit the form. Please try again.";
+
+        formError.style.display = "block";
+
+        captchaCompleted = false;
+
+        if (typeof grecaptcha !== "undefined") {
+          grecaptcha.reset(window.shortFormWidgetId);
+        }
+        captchaToken = "";
+
+        recaptchaContainer.style.display = "none";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+      }
+    });
+ });
+</script>

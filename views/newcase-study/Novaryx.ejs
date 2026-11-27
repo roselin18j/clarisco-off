@@ -1,0 +1,764 @@
+<%- include('../common-new/header') %>
+
+    <body class="nw-banner-wt-1">
+
+        <%- include('../common-new/navbar') %>
+
+            <section class="pawqeris-hero nova-hero">
+                <div class="container">
+                    <div class="row paw-row align-items-center justify-content-center"
+                        style="background-color: rgba(230, 234, 249, 1);border-radius: 30px;">
+
+                        <div class="col-lg-5 col-md-6 text-start">
+                            <h1 class="pawqeris-hero-title mb-3">
+                                Novaryx: A Blockchain-Backed AI Agent That Acts for You and Proves Every Step
+                            </h1>
+
+                            <a href="jacascript:void(0)" data-bs-toggle="modal" data-bs-target="#PopForm"
+                                class="btn pawqeris-hero-btn">
+                                Click Now
+                            </a>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 text-center hero-img">
+                            <img src="https://assets.clarisco.com/assets/case-study/nova-1.webp"
+                                alt="Pawqeris Pet Identity and Care Ecosystem" class="img-fluid pawqeris-hero-image">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="pawqeris-snapshot py-5">
+                <div class="container">
+
+                    <h2 class="text-center case-htags fw-bold mb-4">
+                        Project Snapshot
+                    </h2>
+                    <img src="https://assets.clarisco.com/assets/case-study/paw-mob2.webp" alt="Pawqeris Project Snapshot"
+                        class="mob-img">
+
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="lftProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Project</h6>
+                                <p>Novaryx</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item paw-two">
+                                <h6>Industry</h6>
+                                <p>AI, Web3, Consumer Technology</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Platform</h6>
+                                <p>Web app, iOS and Android apps</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center cenImg-item p-0">
+                            <img src="https://assets.clarisco.com/assets/case-study/nova-2.webp" alt="Pawqeris Project Snapshot"
+                                class="img-fluid">
+
+                        </div>
+
+                        <div class="rytProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Users</h6>
+                                <p>Professionals, families, partner merchants, developers</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item paw-two">
+                                <h6>Core Technology</h6>
+                                <p>AI Agents, Blockchain, Smart Contracts, Voice AI</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Delivered by</h6>
+                                <p>Clarisco Solutions</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="pawqeris-overview py-5">
+                <div class="container">
+
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-8">
+
+                            <h2 class="pawqeris-overview-title mb-3">
+                                Overview
+                            </h2>
+
+                            <p class="pawqeris-overview-text">
+                                Novaryx is an AI agent that finishes the job. Users can ask it to research a topic,
+                                order dinner, buy a product, book a trip, manage a calendar, or summarise the morning's
+                                news, and it carries the task through from start to end.
+                            </p>
+
+                            <p class="pawqeris-overview-text">
+                                An assistant that spends money and handles personal details has to be trustworthy. So
+                                every user receives a blockchain-based identity that defines what the agent can do, how
+                                much it can spend, and leaves a permanent, verifiable record of each action.
+                            </p>
+
+                            <p class="pawqeris-overview-text mb-4">
+                                Clarisco Solutions delivered the project from concept to launch, covering strategy, UX,
+                                AI engineering, blockchain architecture, integrations, and testing.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 col-md-9 col-11 text-center">
+                            <img src="https://assets.clarisco.com/assets/case-study/nova-3.webp"
+                                alt="Pawqeris Pet Care Platform Overview" class="img-fluid pawqeris-overview-image">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <% const challengeData=[ { title: "Advice without action" ,
+                description: "Most assistants suggest next steps but leave the ordering, paying, and booking to the user."
+                }, { title: "A trust gap" ,
+                description: "Wrong orders, hidden charges, and unclear responsibility make people cautious." }, {
+                title: "No reliable proof" ,
+                description: "Chat logs can be edited or lost, so disputes are hard to settle." }, {
+                title: "Scattered tools" ,
+                description: "Research, shopping, food, travel, email, and news sit in separate apps." }, {
+                title: "Limited control" ,
+                description: "Users want to decide how much freedom the agent gets, and most products offer little say."
+                } ]; %>
+
+                <section class="pawqeris-challenge py-5">
+                    <div class="container">
+
+                        <div class="text-center mb-4">
+                            <h2 class="pawqeris-challenge-title">The Challenge</h2>
+                            <p class="pawqeris-challenge-description">
+                                AI assistants converse well, yet people hesitate to hand over real tasks. Our research
+                                with consumers and merchants revealed five barriers.
+                            </p>
+                        </div>
+
+                        <% challengeData.forEach((item)=> { %>
+                            <div class="pawqeris-challenge-item d-flex align-items-stretch mb-3">
+
+                                <div
+                                    class="pawqeris-challenge-label d-flex align-items-center justify-content-center text-center">
+                                    <%= item.title %>
+                                </div>
+
+                                <div class="pawqeris-challenge-content d-flex align-items-center">
+                                    <%= item.description %>
+                                </div>
+
+                            </div>
+                            <% }) %>
+
+                    </div>
+                </section>
+
+
+
+                <% const objectivesData=[ "Build an agent that completes everyday tasks."
+                    , "Give users firm control over permissions and spending."
+                    , "Record every action so it can be verified later."
+                    , "Bring information, commerce, planning, and news into one place."
+                    , "Keep the experience simple for people who know nothing about blockchain." ]; const solutionData={
+                    title: "Our Solution" ,
+                    description: "Our guiding idea was autonomy with accountability. The agent moves quickly on the user's behalf, but only within limits they set, and always leaves a trail that can be checked."
+                    }; %>
+
+
+                    <section class="pawqeris-objectives py-4 py-lg-5">
+                        <div class="container">
+
+                            <div class="row pawqeris-obj-row align-items-start position-relative g-0">
+
+                                <!-- Curve divider -->
+                                <div class="pawqeris-objectives-curve d-none d-md-block">
+                                    <img src="https://assets.clarisco.com/assets/case-study/curve.webp" alt="" class="img-fluid">
+                                </div>
+
+                                <!-- Objectives -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-left">
+
+
+                                    <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                        Objectives
+                                    </h2>
+
+                                    <div class="pawqeris-objectives-line mb-3"></div>
+
+                                    <p class="pawqeris-objectives-intro mb-3 mb-md-4 mb-lg-4">
+                                        These objectives balance what people want most from an AI agent: action and
+                                        control. Each one guided how we designed Novaryx's permissions and records.
+                                    </p>
+
+                                    <ol class="pawqeris-objectives-list list-unstyled mb-0">
+                                        <% objectivesData.forEach((objective, index)=> { %>
+                                            <li class="d-flex align-items-start mb-2 mb-lg-3 mb-md-3">
+                                                <span class="pawqeris-objective-number me-3">
+                                                    <%= String(index + 1).padStart(2, '0' ) %>.
+                                                </span>
+
+                                                <span class="pawqeris-objective-text">
+                                                    <%= objective %>
+                                                </span>
+                                            </li>
+                                            <% }) %>
+                                    </ol>
+
+                                </div>
+
+
+                                <!-- Our Solution -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-right">
+
+
+                                    <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                        <%= solutionData.title %>
+                                    </h2>
+
+                                    <div class="pawqeris-objectives-line mb-3"></div>
+
+                                    <p class="pawqeris-solution-description mb-4">
+                                        <%= solutionData.description %>
+                                    </p>
+
+                                    <div class="pawqeris-solution-highlight text-center">
+                                        "People will only hand real tasks to an agent they can trust. With Novaryx,
+                                        every
+                                        action stays inside the user's limits and leaves a record anyone can verify."
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <% const primaryFeaturesData=[ { title: "Multi-Sport Tracking: " ,
+                        description: "Running, cycling, walking, swimming, gym sessions and team sports."
+                        }, { title: "Points for Effort" ,
+                        description: "Points reflect real exertion, not just distance, so every fitness level can earn fairly." }, {
+                        title: "Personal Score:" ,
+                        description: "A daily score that combines physical activity, mental wellbeing, mindful practice, and community participation."
+                        }, { title: "Streaks and Milestones:" ,
+                        description: "Rewards for steady habits, personal bests, and challenges completed." }, {
+                        title: "Reward Wallet:" ,
+                        description: "Points can be redeemed for partner offers, discounts, premium features, and event entries."
+                        }, { title: "Email and Calendar Management" ,
+                        description: "Drafts replies, sorts the inbox, schedules meetings and spots clashes." }, {
+                        title: "Travel and Service Booking" ,
+                        description: "Searches options, compares them, and books flights, stays, rides, and appointments."
+                        } ]; %>
+
+                        <section class="pawqeris-primary-features py-5">
+                            <div class="container">
+
+                                <!-- Heading -->
+                                <div class="text-center mb-4">
+                                    <h2 class="pawqeris-features-title mb-2">
+                                        Primary Features
+                                    </h2>
+
+                                    <p class="pawqeris-features-subtitle mb-2">
+                                        Activity Rewards Engine
+                                    </p>
+
+                                    <p class="pawqeris-features-description mb-0">
+                                        Workouts are captured through the phone and connected wearables, then converted
+                                        into points based on type, duration, intensity, and consistency. Core elements
+                                        include:
+                                    </p>
+                                </div>
+
+                                <!-- Content -->
+                                <div class="row justify-content-center align-items-center g-4">
+
+                                    <!-- Image -->
+                                    <div class="col-lg-4 col-md-5">
+                                        <img src="https://assets.clarisco.com/assets/case-study/nova-4.webp"
+                                            alt="Pawqeris Primary Features" class="img-fluid pawqeris-features-image">
+                                    </div>
+
+                                    <!-- Features List -->
+                                    <div class="col-lg-6 col-md-7">
+                                        <ul class="pawqeris-features-list mb-0">
+                                            <% primaryFeaturesData.forEach((item)=> { %>
+                                                <li class="pawqeris-feature-item">
+                                                    <h6>
+                                                        <%= item.title %>
+                                                    </h6>
+                                                    <p>
+                                                        <%= item.description %>
+                                                    </p>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <% const bookingData=[ { title: "A Trusted Identity and Permission Layer" ,
+                            description: "Each user holds a blockchain-based identity. From it, they decide which actions the agent may take, which merchants it may use, and how much it may spend, per order and per day. Anything beyond those limits waits for their approval."
+                            }, { title: "A Verifiable Action Ledger" ,
+                            description: "Every order, payment, and decision creates a tamper-resistant entry with a receipt. Users can review the full history at any time, and the same record helps settle disputes quickly."
+                            } ]; const secondaryFeaturesData=[ { title: "Voice and Multimodal Mode" ,
+                            description: "Hands-free conversation, plus the ability to understand photos, screenshots, and documents, so users can show the agent a receipt or a product and ask for help."
+                            }, { title: "Personal Memory" ,
+                            description: "The agent remembers favourite dishes, sizes, addresses and habits. Users can view, edit, or erase anything it knows."
+                            }, { title: "Automations and Background Tasks" ,
+                            description: "Recurring jobs such as weekly groceries, price alerts, or a morning briefing run on a schedule without the user watching."
+                            }, { title: "Proactive Suggestions" ,
+                            description: "The agent flags useful moments on its own, such as a price drop on a saved item, a delayed delivery, or a meeting that needs rescheduling."
+                            }, { title: "Smart Wallet" ,
+                            description: "A built-in wallet with clear balances, spending categories, and instant confirmations."
+                            }, { title: "Connectors" ,
+                            description: "Secure links to email, calendars, cloud storage, shopping accounts and business tools."
+                            }, { title: "Multi-Agent Teamwork" ,
+                            description: "A lead agent hands parts of a task to specialist agents, such as a researcher, a shopper, and a planner, and checks their results."
+                            }, { title: "Skill Marketplace" ,
+                            description: "A catalogue where partners add new abilities, from grocery delivery to expense reporting."
+                            }, { title: "Community Commons" ,
+                            description: "A shared space where users trade tips, templates and automations." }, {
+                            title: "Rewards and Tokens" ,
+                            description: "Users and skill creators earn tokens for activity, referrals, and useful contributions, and spend them across the network."
+                            }, { title: "Developer Access" ,
+                            description: "APIs and tools for third parties to build skills and connect their services."
+                            } ]; %>
+
+                            <section class="pawqeris-booking-features py-5">
+                                <div class="container">
+
+                                    <!-- Booking Feature -->
+                                    <% bookingData.forEach((item)=> { %>
+                                        <div class="row  mb-4">
+                                            <div class="col-lg-8">
+                                                <h2 class="pawqeris-booking-title mb-2">
+                                                    <%= item.title %>
+                                                </h2>
+
+                                                <p class="pawqeris-booking-description mb-0">
+                                                    <%= item.description %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <% }); %>
+
+                                            <!-- Secondary Features -->
+                                            <div class="row justify-content-center">
+                                                <div class="col-lg-8">
+
+                                                    <h3 class="pawqeris-secondary-title mb-3">
+                                                        Secondary Features
+                                                    </h3>
+
+                                                    <div class="pawqeris-secondary-card">
+
+                                                        <% secondaryFeaturesData.forEach((item)=> { %>
+                                                            <div
+                                                                class="pawqeris-secondary-item d-flex align-items-center">
+
+                                                                <div class="pawqeris-secondary-label">
+                                                                    <h6 class="mb-0">
+                                                                        <%= item.title %>
+                                                                    </h6>
+                                                                </div>
+
+                                                                <div class="pawqeris-secondary-content">
+                                                                    <p class="mb-0">
+                                                                        <%= item.description %>
+                                                                    </p>
+                                                                </div>
+
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                </div>
+                            </section>
+
+
+                            <section class="pawqeris-additonal py-5 overflow-hidden">
+                                <div class="container">
+
+                                    <div class="row col-lg-7 mx-auto mb-lg-4 mb-md-3 mb-2">
+                                        <div class="col-12 text-center">
+                                            <h2 class="case-htags">Additional Features Added by Clarisco</h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-5 additonal-rows justify-content-center mt-lg-4 mt-md-3 mt-2">
+
+                                        <!-- Left Column -->
+                                        <div class="col-lg-6 mt-lg-4 mt-md-3 mt-2">
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5 ">
+                                                <h6 class="fw-bold">Approval Cards:</h6>
+                                                <p class="mb-0">
+                                                    Clear confirmations before any purchase, showing item, price, and
+                                                    merchant.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Emergency Stop:</h6>
+                                                <p class="mb-0">
+                                                    A one-tap control that pauses the agent and freezes its spending
+                                                    authority at once.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Activity Timeline: </h6>
+                                                <p class="mb-0">
+                                                    A readable feed of what the agent did, when, and why.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Refund and Dispute Flow:</h6>
+                                                <p class="mb-0">
+                                                    Guided claims backed by the on-chain record.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Fact Grounding:</h6>
+                                                <p class="mb-0">
+                                                    Answers tied to verified, current sources to reduce errors.
+                                                </p>
+                                            </div>
+
+
+                                        </div>
+
+                                        <!-- Right Column -->
+                                        <div class="col-lg-6 mt-md-4 mt-lg-4 mt-md-3 mt-2">
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Family and Shared Accounts:</h6>
+                                                <p class="mb-0">
+                                                    Separate permissions for household members, including limits for
+                                                    children.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Privacy Vault: </h6>
+                                                <p class="mb-0">
+                                                    Encrypted storage for addresses, payment details, and preferences,
+                                                    shared only with consent.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Merchant Verification: </h6>
+                                                <p class="mb-0">
+                                                    Credential checks and trust badges for partner stores.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Multilingual Support and Accessibility:</h6>
+                                                <p class="mb-0">
+                                                    Regional languages, screen-reader support, and adjustable text.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Admin and Analytics Console: </h6>
+                                                <p class="mb-0">
+                                                    Tools for monitoring, merchant onboarding, dispute handling, and
+                                                    platform insights.
+                                                </p>
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <% const technologyApproachData=[ { layer: "AI Engine" ,
+                                approach: "Language models with tools, tasks, memory, and safety checks" }, {
+                                layer: "Agents" ,
+                                approach: "A coordinating agent with specialist sub-agents and verification" }, {
+                                layer: "Voice and Vision" ,
+                                approach: "Speech recognition, natural speech output, and image understanding" }, {
+                                layer: "Blockchain" ,
+                                approach: "On-chain identity, permission rules, records, and token payments" }, {
+                                layer: "Integrations" ,
+                                approach: "Secure connections to retailers, food platforms, and travel providers" }, {
+                                layer: "Mobile and Web" , approach: "Cross-platform apps with a responsive dashboard" },
+                                { layer: "Backend" ,
+                                approach: "Scalable cloud services, secure APIs, and role-based access" }, {
+                                layer: "Security" ,
+                                approach: "End-to-end encryption, multi-factor login, spending limits" } ]; %>
+
+                                <section class="pawqeris-technology py-3 py-lg-5 py-md-4">
+                                    <div class="container">
+
+                                        <h2 class="case-htags text-center mb-3 mb-lg-4 mb-md-4">
+                                            Our Technology Approach
+                                        </h2>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8 col-md-10">
+
+                                                <div class="table-responsive">
+                                                    <div class="pawqeris-technology-table">
+
+                                                        <div class="row g-0 pawqeris-technology-header">
+                                                            <div class="col-3 text-center">Layer</div>
+                                                            <div class="col-9 text-center">Approach</div>
+                                                        </div>
+
+                                                        <% technologyApproachData.forEach((item)=> { %>
+                                                            <div class="row g-0 pawqeris-technology-row">
+                                                                <div class="col-3">
+                                                                    <div class="pawqeris-technology-layer">
+                                                                        <p>
+                                                                            <%= item.layer %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-9">
+                                                                    <div class="pawqeris-technology-approach">
+                                                                        <p>
+                                                                            <%= item.approach %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
+
+                                <% const processData=[ { title: "Discovery" ,
+                                    description: "Interviews and journey mapping with consumers, merchants, and developers."
+                                    }, { title: "Strategy" ,
+                                    description: "Features grouped into core, secondary, and value-add, with a phased roadmap."
+                                    }, { title: "Design" ,
+                                    description: "Calm, conversational interfaces tested with real users before development."
+                                    }, { title: "Development" ,
+                                    description: "Agile sprints for the agent, permission layer, smart contracts, apps, and integrations."
+                                    }, { title: "Testing" ,
+                                    description: "Functional, load, and penetration testing, safety testing of agent behaviour, and a smart contract review."
+                                    }, { title: "Launch" ,
+                                    description: "A staged rollout with early merchants, then steady improvement from feedback."
+                                    } ]; %>
+
+                                    <section class="pawqeris-process py-5">
+                                        <div class="container">
+
+                                            <h2 class="pawqeris-process-title text-center mb-4">
+                                                Our Process
+                                            </h2>
+
+                                            <div class="row align-items-center justify-content-center">
+
+                                                <!-- Process Steps -->
+                                                <div class="col-lg-6 col-md-7">
+                                                    <div class="pawqeris-process-list">
+
+                                                        <% processData.forEach((item)=> { %>
+                                                            <div class="pawqeris-process-item mb-4">
+
+                                                                <h6 class="pawqeris-process-item-title mb-2">
+                                                                    <%= item.title %>:
+                                                                </h6>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <%= item.description %>
+                                                                </p>
+
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Process Image -->
+                                                <div class="col-lg-5 col-md-5 text-center">
+                                                    <img src="https://assets.clarisco.com/assets/case-study/nova-5.webp"
+                                                        alt="Pawqeris Development Process"
+                                                        class="img-fluid pawqeris-process-image">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </section>
+
+
+                                    <% const challengeData1=[ { title: "Freedom versus safety" ,
+                                        description: "The agent acts quickly within user-set limits, and anything unusual triggers an approval step."
+                                        }, { title: "Mistakes that spread" ,
+                                        description: "Answers are grounded in verified sources, and results are double-checked by a supervising agent."
+                                        }, { title: "Actions across many partners " ,
+                                        description: "A standard integration layer and fallback checks keep orders accurate across merchants."
+                                        }, { title: "Privacy with transparency" ,
+                                        description: "Proof is verifiable by the user, while personal details stay encrypted."
+                                        }, { title: "Keeping Web3 invisible" ,
+                                        description: " Identity, wallets, and records work behind the scenes, so users simply make a request and confirm it."
+                                        },]; %>
+
+
+                                        <section class="pawqeris-challenge py-5">
+                                            <div class="container">
+
+                                                <h2 class="pawqeris-process-title text-center fw-bold mb-4">
+                                                    Challenges and How We Solved Them
+                                                </h2>
+
+                                                <div class="col-lg-10 mx-auto">
+                                                    <ul class="list-unstyled mb-0">
+
+                                                        <% challengeData1.forEach((item)=> { %>
+                                                            <li class="d-flex align-items-baseline gap-2 mb-3">
+
+                                                                <span class="text-secondary">•</span>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <strong class="fw-semibold">
+                                                                        <%= item.title %>
+                                                                    </strong>
+                                                                    - <%= item.description %>
+                                                                </p>
+
+                                                            </li>
+                                                            <% }) %>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </section>
+
+
+
+                                        <% const
+                                            pawqerisResultsData=[ "Everyday tasks completed in one conversation instead of across several apps."
+                                            , "Greater confidence in letting an agent handle purchases, thanks to limits and receipts."
+                                            , "Faster dispute resolution using verifiable records."
+                                            , "Higher engagement through briefings, automations and community features."
+                                            , "New revenue paths for merchants, developers and skill creators." , ]; %>
+
+                                            <section class="pawqeris-results py-5">
+                                                <div class="container">
+
+                                                    <div
+                                                        class="d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+
+                                                        <!-- Left Content -->
+                                                        <div class="pawqeris-results-content col-lg-6 col-md-7">
+
+                                                            <h2 class="pawqeris-results-title fw-bold mb-4">
+                                                                Results and Impact of Pawqeris
+                                                            </h2>
+
+                                                            <ul class="list-unstyled mb-0">
+                                                                <% pawqerisResultsData.forEach((item)=> { %>
+                                                                    <li class="d-flex align-items-baseline gap-2 mb-3">
+                                                                        <span class="text-secondary">•</span>
+                                                                        <p class="pawqeris-results-text mb-0">
+                                                                            <%= item %>
+                                                                        </p>
+                                                                    </li>
+                                                                    <% }) %>
+                                                            </ul>
+
+                                                        </div>
+
+                                                        <!-- Right Image -->
+                                                        <div
+                                                            class="pawqeris-results-image-wrapper col-lg-5 col-md-5 text-center">
+                                                            <img src="https://assets.clarisco.com/assets/case-study/nova-6.webp"
+                                                                alt="Pawqeris Results and Impact"
+                                                                class="img-fluid pawqeris-results-image">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </section>
+
+
+                                            <section class="pawqeris-conclusion py-5">
+                                                <div class="container">
+
+                                                    <h2 class="fw-bold mb-3">
+                                                        Conclusion
+                                                    </h2>
+
+                                                    <p class="pawqeris-conclusion-text mb-4">
+                                                        Novaryx shows that an AI agent becomes truly useful once people
+                                                        can trust it. By pairing a capable assistant with
+                                                        user-controlled permissions and a verifiable record of every
+                                                        step, the platform turns everyday tasks into one simple
+                                                        conversation.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-4">
+                                                        At Clarisco Solutions, we combine technical depth with a
+                                                        user-first approach to turn ambitious ideas like Novaryx into
+                                                        products people use daily.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-0">
+                                                        Planning an AI or Web3 product like Novaryx? Talk to Clarisco
+                                                        Solutions.
+                                                    </p>
+
+                                                </div>
+                                            </section>
+
+
+                                            <%- include('../common-new/footer') %>
+
+
+                                                            <script>
+                                                                $(document).ready(function () {
+                                                                    $(window).scroll(function () {
+                                                                        var wscroll = $(this).scrollTop();
+                                                                        if (wscroll > 50) {
+                                                                            $(".top-newbar-section .navbar").css("background-color", "rgb(249 251 255)");
+                                                                        }
+                                                                        else {
+                                                                            $(".top-newbar-section .navbar").css("background-color", "transparent");
+                                                                        }
+                                                                    });
+                                                                });
+                                                            </script>
+    </body>
+
+    </html>

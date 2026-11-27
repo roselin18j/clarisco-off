@@ -1,0 +1,795 @@
+<%- include('../common-new/header') %>
+
+    <body class="nw-banner-wt-1">
+
+        <%- include('../common-new/navbar') %>
+
+            <section class="pawqeris-hero">
+                <div class="container-fluid">
+                    <div class="row  pawqeris-hero-row align-items-center justify-content-center">
+
+                        <div class="col-lg-4 col-md-6 text-start">
+                            <h1 class="pawqeris-hero-title mb-3">
+                                Zuriva: A Digital Banking Platform Built for Africa, With Cards and Crypto Built In
+                            </h1>
+
+                            <a href="jacascript:void(0)" data-bs-toggle="modal" data-bs-target="#PopForm"
+                                class="btn pawqeris-hero-btn">
+                                Click Now
+                            </a>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 text-center hero-img">
+                            <img src="https://assets.clarisco.com/assets/case-study/zuri-1.webp"
+                                alt="Zuriva" class="img-fluid pawqeris-hero-image">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pawqeris-snapshot py-5">
+                <div class="container">
+
+                    <h2 class="text-center case-htags fw-bold mb-4">
+                        Project Snapshot
+                    </h2>
+                    <img src="https://assets.clarisco.com/assets/case-study/zuri-2.webp"
+                        alt="Zuriva Project Snapshot" class="mob-img">
+
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="lftProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Project</h6>
+                                <p>Zuriva</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item paw-two">
+                                <h6>Industry</h6>
+                                <p>Banking, Fintech, Digital Assets </p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Platform</h6>
+                                <p>iOS and Android apps, USSD access, web dashboard and banking APIs</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center cenImg-item p-0">
+                            <img src="https://assets.clarisco.com/assets/case-study/zuri-2.webp"
+                                alt="Pawqeris Project Snapshot" class="img-fluid">
+
+                        </div>
+
+                        <div class="rytProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Users</h6>
+                                <p> Individuals, small businesses, banks, microfinance, mobile money operators</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item paw-two">
+                                <h6>Core Technology</h6>
+                                <p>AI, Core Banking, Card Issuing, Crypto Wallets, KYC/AML, Open APIs</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Delivered by</h6>
+                                <p>Clarisco Solutions</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pawqeris-overview py-3 py-lg-5 py-md-4">
+                <div class="container">
+
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-10">
+
+
+
+                            <h2 class="case-htags mb-3">
+                                Overview
+                            </h2>
+
+                            <p class="pawqeris-overview-text col-lg-8 mx-auto">
+                                Zuriva is an AI-powered digital bank designed around how Africans actually save, spend and send
+                                money. Customers open an account from their phone, hold several local currencies, pay
+                                with virtual or physical cards, connect mobile money and buy or hold stablecoins in the
+                                same app.
+                            </p>
+
+                            <p class="pawqeris-overview-text">
+                                The platform also serves the financial sector itself. Banks, microfinance institutions,
+                                fintechs and payment companies can plug into Zuriva's services to launch products
+                                faster, without building a full banking stack from scratch.
+
+
+                            </p>
+
+                            <p class="pawqeris-overview-text mb-4">
+                                Clarisco Solutions delivered the project from concept to launch, covering strategy, UX,
+                                core banking architecture, card and crypto integrations, compliance workflows, and
+                                testing.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 col-md-9 col-11 text-center">
+                            <img src="https://assets.clarisco.com/assets/case-study/zuri-3.webp"
+                                alt="Zuriva" class="img-fluid pawqeris-overview-image">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <% const challengeData=[ { title: "Slow, paper-heavy onboarding" ,
+                description: "Opening an account often means branch visits and long verification. " },{ title: "Fragmented payment systems" ,
+                description: "Bank accounts, mobile money wallets and cards rarely work together." }, {
+                title: "Costly cross-border payments" ,
+                description: "Sending money between countries is slow and expensive, with unpredictable fees." }, {
+                title: "Currency volatility" ,
+                description: "Users and businesses struggle to protect value when local currencies swing." }, {
+                title: "Limited access" ,
+                description: "Many people have patchy internet, basic phones or no formal credit history." }, {
+                title: "Legacy technology" ,
+                description: "Banks and lenders carry ageing systems that slow down new products." } ]; %>
+
+                <section class="pawqeris-challenge py-5">
+                    <div class="container">
+
+                        <div class="text-center mb-4">
+                            <h2 class="case-htags mb-3">The Challenge</h2>
+                            <p class="pawqeris-challenge-description">
+                                Africa has a young, mobile-first population, yet financial services remain uneven. Our
+                                research with consumers, small businesses and financial institutions revealed six
+                                barriers:
+                            </p>
+                        </div>
+
+                        <% challengeData.forEach((item)=> { %>
+                            <div
+                                class="pawqeris-challenge-item d-flex align-items-stretch mb-2 mb-lg-3 col-lg-11 mx-auto">
+
+                                <b
+                                    class="pawqeris-challenge-label d-flex align-items-center justify-content-center text-center">
+                                    <%= item.title %>
+                                </b>
+
+                                <p class="pawqeris-challenge-content d-flex align-items-center">
+                                    <%= item.description %>
+                                </p>
+
+                            </div>
+                            <% }) %>
+
+                    </div>
+                </section>
+
+
+                <% const objectivesData=[ "Let anyone open and use a verified account in minutes."
+                    , "Connect bank accounts, mobile money, cards, and crypto in a single experience."
+                    , "Make local and cross-border payments faster and cheaper."
+                    , "Support users with limited connectivity and basic devices."
+                    , "Give banks and financial institutions ready-made infrastructure through APIs."
+                    , "Meet regulatory and security requirements across multiple markets." ]; const solutionData={
+                    title: "Our Solution" ,
+                    description: "Our guiding idea was one platform, many rails. Zuriva sits above local banking networks, mobile money, card schemes, and blockchain networks, and presents them to the user as a single, simple account."
+                    }; %>
+
+
+
+                    <section class="pawqeris-objectives py-4 py-lg-5">
+                        <div class="container">
+
+                            <div class="row pawqeris-obj-row align-items-start position-relative g-0">
+
+                                <!-- Curve divider -->
+                                <div class="pawqeris-objectives-curve d-none d-md-block">
+                                    <img src="https://assets.clarisco.com/assets/case-study/curve.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+
+                                <!-- Objectives -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-left">
+
+
+                                    <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                        Objectives
+                                    </h2>
+
+                                    <div class="pawqeris-objectives-line mb-3"></div>
+
+                                    <p class="pawqeris-objectives-intro mb-3 mb-md-4 mb-lg-4">
+                                        These objectives guided every product decision, from onboarding to settlement.
+                                        They keep Zuriva accessible to everyday users while reliable enough for
+                                        regulated institutions.
+                                    </p>
+
+                                    <ol class="pawqeris-objectives-list list-unstyled mb-0">
+                                        <% objectivesData.forEach((objective, index)=> { %>
+                                            <li class="d-flex align-items-start mb-2 mb-lg-3 mb-md-3">
+                                                <span class="pawqeris-objective-number me-3">
+                                                    <%= String(index + 1).padStart(2, '0' ) %>.
+                                                </span>
+
+                                                <span class="pawqeris-objective-text">
+                                                    <%= objective %>
+                                                </span>
+                                            </li>
+                                            <% }) %>
+                                    </ol>
+
+                                </div>
+
+
+                                <!-- Our Solution -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-right">
+
+
+                                    <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                        <%= solutionData.title %>
+                                    </h2>
+
+                                    <div class="pawqeris-objectives-line mb-3"></div>
+
+                                    <p class="pawqeris-solution-description mb-4">
+                                        <%= solutionData.description %>
+                                    </p>
+
+                                    <div class="pawqeris-solution-highlight text-center">
+                                        'From a phone number to a full bank in minutes. This is how Zuriva delivers
+                                        instant onboarding, virtual cards and stablecoin wallets for Africa's next
+                                        billion.'
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <% const primaryFeaturesData=[ { title: "Instant Digital Onboarding" ,
+                        description: "Customers sign up with a phone number and national ID, take a selfie with liveness detection, and are verified automatically."
+                        }, { title: "Multi-Currency Accounts and Wallets" ,
+                        description: "Each user holds balances in multiple African currencies and major global ones, with instant conversion at clear rates. "
+                        }, { title: "Card Issuance" ,
+                        description: "Users can create virtual cards in seconds and request physical cards for everyday spending."
+                        }, { title: "Crypto Integration" ,
+                        description: "A secure digital asset wallet lets customers buy, sell, hold and send stablecoins and leading cryptocurrencies."
+                        }, { title: "Payments and Transfers" ,
+                        description: "Instant bank transfers, mobile money transfers, bill payments, merchant QR payments and cross-border remittances, all from one app."
+                        }, ]; %>
+
+                        <section class="pawqeris-primary-features  py-5">
+                            <div class="container">
+
+                                <div class="text-center mb-4">
+                                    <h2 class="case-htags mb-2">
+                                        Primary Features
+                                    </h2>
+
+                                    <!-- <p class="pawqeris-features-description mb-2">
+                                        Trusted, Tamper-Resistant Pet Records
+                                    </p>
+
+                                    <p class="pawqeris-features-description mb-0">
+                                        Core data is anchored on the blockchain, so anyone can verify an entry,
+                                        but no one can quietly change it. The record vault holds:
+                                    </p> -->
+                                </div>
+
+                                <div class="mt-2 col-lg-11 mx-auto row justify-content-center align-items-start g-4">
+
+                                    <div class="col-lg-5 col-md-5">
+                                        <img src="https://assets.clarisco.com/assets/case-study/zuri-4.webp"
+                                            alt="Zuriva Primary Features" class="img-fluid pawqeris-features-image">
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7">
+                                        <ul class="pawqeris-features-list mb-0">
+                                            <% primaryFeaturesData.forEach((item)=> { %>
+                                                <li class="pawqeris-feature-item">
+                                                    <h6>
+                                                        <%= item.title %>
+                                                    </h6>
+                                                    <p>
+                                                        <%= item.description %>
+                                                    </p>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <% const bookingData={ title: "Quick Vet and Grooming Bookings" ,
+                            description: "Owners find and book vets and groomers in a few taps, with live availability, confirmations, and reminders. Providers manage their schedule from a dashboard, see shared records before each visit, and log updates afterwards."
+                            }; const secondaryFeaturesData=[ { title: "AI Banking Assistant:" ,
+                            description: "A 24/7 conversational assistant inside the app that answers users' queries in their own language."
+                            }, { title: "AI Financial Coach:" ,
+                            description: "Personalised guidance that studies income and spending patterns, suggests savings goals, and warns about upcoming bills." } , { title : "Mobile Money Connect" ,
+                            description: "Link mobile money wallets to top up, withdraw or move funds between systems without leaving the app."
+                            }, { title: "USSD and Lite Access" ,
+                            description: "A text-based channel and low-data app mode for basic phones and weak networks."
+                            }, { title: "Savings and Goals" ,
+                            description: "Flexible and locked savings pots with automated deposits and round-ups." }, {
+                            title: "Micro-Loans and Credit" ,
+                            description: "Short-term loans scored on transaction history and alternative data, helping people without a formal credit record."
+                            }, { title: "Business Banking" ,
+                            description: "Invoicing, bulk payouts, payroll, team cards and expense tracking for small and growing businesses."
+                            }, { title: "Merchant Tools" ,
+                            description: "QR codes, payment links and point-of-sale options for shops and online sellers."
+                            }, { title: "Remittances" ,
+                            description: "Low-cost transfers to and from the diaspora, using both traditional rails and stablecoins."
+                            }, { title: "Insurance and Investments" ,
+                            description: "In-app access to partner insurance products and savings or investment options."
+                            } ];
+                            const financialFeaturesData=[ { title: "Commercial and retail banks" ,
+                            description: "Digital front ends, card programmes and faster product launches." }, {
+                            title: "Microfinance institutions and savings groups" ,
+                            description: "Digital lending, collections and member management." }, {
+                            title: "Mobile money operators" ,
+                            description: "Interoperability with bank accounts and cards." }, {
+                            title: "Fintechs and payment companies" ,
+                            description: "Embedded accounts, cards and crypto services through APIs." }, {
+                            title: "Remittance and forex providers " ,
+                            description: "Faster, lower-cost corridors across the continent and abroad." }, {
+                            title: "Insurers and investment firms " ,
+                            description: "Distribution and premium collection through the app." }, {
+                            title: "Small and medium businesses" ,
+                            description: "Accounts, payments, payroll, and working capital." } ]; %>
+
+                            <section class="pawqeris-booking-features col-lg-9 mx-auto  py-3 py-lg-5 py-md-4">
+                                <div class="container">
+
+                                    <!-- <div class="row col-lg-10 justify-content-start mb-4">
+                                        <div class="w-100">
+                                            <h2 class="pawqeris-booking-title mb-2">
+                                                <%= bookingData.title %>
+                                            </h2>
+
+                                            <p class="pawqeris-booking-description mb-0">
+                                                <%= bookingData.description %>
+                                            </p>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="row justify-content-center">
+                                        <div class="w-100">
+
+                                            <h3 class="pawqeris-secondary-title mb-3">
+                                                Secondary Features
+                                            </h3>
+
+                                            <div class="pawqeris-secondary-card">
+                                                <% secondaryFeaturesData.forEach((item)=> { %>
+                                                    <div class="pawqeris-secondary-item d-flex align-items-start">
+                                                        <div class="pawqeris-secondary-label">
+                                                            <h6 class="mb-2">
+                                                                <%= item.title %>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="pawqeris-secondary-content">
+                                                            <p class="mb-0">
+                                                                <%= item.description %>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row justify-content-center mt-3 mt-md-5 mt-lg-5">
+                                        <div class="w-100">
+
+                                            <h3 class="pawqeris-secondary-title mb-3">
+                                                Financial Sectors Covered
+                                            </h3>
+
+                                            <div class="pawqeris-secondary-card">
+                                                <% financialFeaturesData.forEach((item)=> { %>
+                                                    <div class="pawqeris-secondary-item d-flex align-items-start">
+                                                        <div class="pawqeris-secondary-label">
+                                                            <h6 class="mb-2">
+                                                                <%= item.title %>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="pawqeris-secondary-content">
+                                                            <p class="mb-0">
+                                                                <%= item.description %>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="pawqeris-additonal py-5">
+                                <div class="container">
+
+                                    <div class="row col-lg-7 mx-auto mb-lg-4 mb-md-3 mb-2">
+                                        <div class="col-12 text-center">
+                                            <h2 class="case-htags">Additional Features Added by Clarisco</h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-5 additonal-rows justify-content-center mt-lg-4 mt-md-3 mt-2">
+
+                                        <!-- Left Column -->
+                                        <div class="col-lg-6 mt-lg-4 mt-md-3 mt-2">
+
+                                             <div class="mb-3 mb-md-4 mb-lg-5 ">
+                                                <h6 class="fw-bold">AI Support Chatbot:</h6>
+                                                <p class="mb-0">
+                                                    Instant, multilingual help for disputes with a smooth handover to a human agent for complex cases.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5 ">
+                                                <h6 class="fw-bold">AI Fraud Detection:</h6>
+                                                <p class="mb-0">
+                                                  Machine-learning models that spot unusual transactions in real time and trigger alerts.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5 ">
+                                                <h6 class="fw-bold">Fraud Monitoring:</h6>
+                                                <p class="mb-0">
+                                                    Real-time detection of unusual transactions, with instant alerts and
+                                                    card controls.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Smart Compliance Engine:</h6>
+                                                <p class="mb-0">
+                                                    Automated KYC, AML screening, transaction monitoring and regulatory
+                                                    reporting by market.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-0">
+                                                <h6 class="fw-bold">Biometric Security:</h6>
+                                                <p class="mb-0">
+                                                    Fingerprint and face login, plus device binding for added
+                                                    protection.
+                                                </p>
+                                            </div>
+
+                                            
+
+                                            
+
+                                        </div>
+
+                                        <!-- Right Column -->
+                                        <div class="col-lg-6 mt-md-4 mt-lg-4 mt-md-3 mt-2">
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Spending Insights:</h6>
+                                                <p class="mb-0">
+                                                    Categorised spending, monthly summaries and budgeting tools.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Multilingual Support:</h6>
+                                                <p class="mb-0">
+                                                    Local languages and clear, simple wording.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Customer Support Chat:</h6>
+                                                <p class="mb-0">
+                                                    In-app chat with an AI assistant and human escalation.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Agent Network Support:</h6>
+                                                <p class="mb-0">
+                                                    Cash-in and cash-out through local agents for users who prefer cash.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Admin and Analytics Console:</h6>
+                                                <p class="mb-0">
+                                                    Tools for onboarding review, limits, pricing, dispute handling,
+                                                    partner management, and performance reporting.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <% const technologyApproachData=[ { layer: "Core Banking" ,
+                                approach: "Modular ledger for accounts, balances, fees, and settlement" }, {
+                                layer: "Card Issuing" ,
+                                approach: "Virtual and physical cards through licensed issuing partners, with real-time controls"
+                                }, { layer: "Crypto" ,
+                                approach: "Secure custody, wallet infrastructure and fiat on/off-ramp integrations" }, {
+                                layer: "Payments" ,
+                                approach: "Connections to local bank networks, mobile money and cross-border rails" }, {
+                                layer: "Identity" ,
+                                approach: "Document checks, biometric liveness and national ID verification" }, {
+                                layer: "APIs" ,
+                                approach: "Documented, versioned APIs with sandbox testing for institutions" }, {
+                                layer: " Mobile and Web " ,
+                                approach: "Cross-platform apps, USSD and a responsive web dashboard" }, {
+                                layer: " Security " ,
+                                approach: "Encryption, multi-factor authentication, tokenised card data and full audit trails"
+                                }, {
+                                layer: " AI " ,
+                                approach: "Language-model assistant, fraud detection, document verification and spending analysis"
+                                }]; %>
+
+
+                                <section class="pawqeris-technology py-3 py-lg-5 py-md-4">
+                                    <div class="container">
+
+                                        <h2 class="case-htags text-center mb-3 mb-lg-4 mb-md-4">
+                                            Our Technology Approach
+                                        </h2>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8 col-md-10">
+
+                                                <div class="table-responsive">
+                                                    <div class="pawqeris-technology-table">
+
+                                                        <div class="row g-0 pawqeris-technology-header">
+                                                            <div class="col-3 text-center">Layer</div>
+                                                            <div class="col-9 text-center">Approach</div>
+                                                        </div>
+
+                                                        <% technologyApproachData.forEach((item)=> { %>
+                                                            <div class="row g-0 pawqeris-technology-row">
+                                                                <div class="col-3">
+                                                                    <div class="pawqeris-technology-layer">
+                                                                        <p>
+                                                                            <%= item.layer %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-9">
+                                                                    <div class="pawqeris-technology-approach">
+                                                                        <p>
+                                                                            <%= item.approach %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
+
+                                <% const processData=[ { title: "Discovery" ,
+                                    description: "Interviews with customers, merchants, banks and regulators, plus market and payment-rail mapping."
+                                    }, { title: "Strategy" ,
+                                    description: "Features grouped into core, secondary and value-add, with a country-by-country rollout plan."
+                                    }, { title: "Design" ,
+                                    description: "Simple, trustworthy interfaces tested with real users, including those on low-end devices."
+                                    }, { title: "Development" ,
+                                    description: "Agile sprints for the ledger, wallets, cards, crypto, APIs and compliance workflows."
+                                    }, { title: "Testing" ,
+                                    description: "Functional, load, penetration and compliance testing, plus a review of crypto and ledger logic."
+                                    }, { title: "Launch" ,
+                                    description: "A staged rollout with pilot users and partner institutions, followed by steady expansion."
+                                    } ]; %>
+
+                                    <section class="pawqeris-process py-5">
+                                        <div class="container">
+
+                                            <h2 class="case-htags text-center mb-4">
+                                                Our Process
+                                            </h2>
+
+                                            <div
+                                                class="row align-items-center justify-content-center col-lg-12 mx-auto">
+
+                                                <!-- Process Steps -->
+                                                <div class="col-lg-6 col-md-7">
+                                                    <div class="pawqeris-process-list">
+
+                                                        <% processData.forEach((item)=> { %>
+                                                            <div class="pawqeris-process-item mb-3 mb-md-4 mb-lg-4">
+
+                                                                <h6 class="pawqeris-process-item-title mb-2">
+                                                                    <%= item.title %>:
+                                                                </h6>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <%= item.description %>
+                                                                </p>
+
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Process Image -->
+                                                <div class="col-lg-5 col-md-5 text-center">
+                                                    <img src="https://assets.clarisco.com/assets/case-study/zuri-5.webp"
+                                                        alt="Zuriva Development Process"
+                                                        class="img-fluid pawqeris-process-image">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </section>
+
+
+                                    <% const challengeData1=[ { title: "Many markets, many rules:" ,
+                                        description: "A configurable compliance engine adapts limits, verification levels, and reporting to each country."
+                                        }, { title: "Trust in new financial tools:" ,
+                                        description: "Clear fee disclosure, instant notifications and strong security build confidence."
+                                        }, { title: "Low connectivity:" ,
+                                        description: "USSD, lite mode and offline-friendly flows keep the service reachable."
+                                        }, { title: "Currency and crypto risk:" ,
+                                        description: "Transparent rates, stablecoin options and clear risk messaging help users protect value."
+                                        }, { title: "Reliable integrations:" ,
+                                        description: "A standard integration layer with monitoring and fallbacks keeps payments dependable."
+                                        } ]; %>
+
+
+                                        <section class="pawqeris-challenge py-3 py-lg-5 py-md-4">
+                                            <div class="container">
+
+                                                <h2 class="case-htags text-center mb-3 mb-lg-5 mb-md-4">
+                                                    Challenges and How We Solved Them
+                                                </h2>
+
+                                                <div class="col-lg-10 mx-auto">
+                                                    <ul class="list-unstyled mb-0">
+
+                                                        <% challengeData1.forEach((item)=> { %>
+                                                            <li class="d-flex align-items-baseline gap-2 mb-3 ">
+
+                                                                <span class="text-secondary">•</span>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <strong class="fw-semibold">
+                                                                        <%= item.title %>
+                                                                    </strong>
+                                                                    - <%= item.description %>
+                                                                </p>
+
+                                                            </li>
+                                                            <% }) %>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </section>
+
+
+                                        <% const pawqerisResultsData=[ "Account opening reduced from days to minutes."
+                                            , "Wider access to banking for people outside traditional branches."
+                                            , "Lower-cost, faster domestic and cross-border payments."
+                                            , "Quicker product launches for partner banks and fintechs."
+                                            , "More visible, accountable support for shelters and pet health research."
+                                            , "New revenue streams from cards, remittances, crypto services and business tools."
+                                            ]; %>
+
+                                            <section class="pawqeris-results py-5 ">
+                                                <div class="container">
+
+                                                    <div
+                                                        class="d-flex res-row col-lg-11 mx-auto align-items-center justify-content-between gap-4">
+
+                                                        <!-- Left Content -->
+                                                        <div class="pawqeris-results-content col-lg-6 col-md-7">
+
+                                                            <h2 class="case-htags fw-bold mb-4">
+                                                                Results and Impact
+                                                            </h2>
+
+                                                            <ul class="list-unstyled mb-0">
+                                                                <% pawqerisResultsData.forEach((item)=> { %>
+                                                                    <li
+                                                                        class="d-flex align-items-baseline gap-2 mb-3 mb-md-2">
+                                                                        <span class="text-secondary">•</span>
+                                                                        <p class="pawqeris-results-text mb-0">
+                                                                            <%= item %>
+                                                                        </p>
+                                                                    </li>
+                                                                    <% }) %>
+                                                            </ul>
+
+                                                        </div>
+
+                                                        <div
+                                                            class="pawqeris-results-image-wrapper col-lg-5 col-md-5 text-center">
+                                                            <img src="https://assets.clarisco.com/assets/case-study/zuri-6.webp"
+                                                                alt="Zuriva Results"
+                                                                class="img-fluid pawqeris-results-image">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </section>
+
+
+                                            <section class="pawqeris-conclusion py-3 py-lg-5 py-md-4 col-lg-9 mx-auto">
+                                                <div class="container">
+
+                                                    <h2 class="case-htags fw-bold mb-3">
+                                                        Conclusion
+                                                    </h2>
+
+                                                    <p class="pawqeris-conclusion-text mb-2 mb-lg-4 mb-md-3">
+                                                        Zuriva shows how a digital bank can meet Africa's needs by
+                                                        connecting what already exists: bank accounts, mobile money,
+                                                        cards and digital assets. By making these work together in one
+                                                        secure experience, the platform opens financial services to more
+                                                        people and gives institutions a faster way to serve them.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-2 mb-lg-4 mb-md-3">
+                                                        At Clarisco Solutions, we combine technical depth with a
+                                                        user-first approach to turn ambitious ideas like Zuriva into
+                                                        products people use daily.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-0">
+                                                      Planning a digital bank or fintech platform for Africa? Talk to Clarisco Solutions.
+                                                    </p>
+
+                                                </div>
+                                            </section>
+
+
+                                            <%- include('../common-new/footer') %>
+
+                                                <script>
+                                                    $(document).ready(function () {
+                                                        $(window).scroll(function () {
+                                                            var wscroll = $(this).scrollTop();
+                                                            if (wscroll > 50) {
+                                                                $(".top-newbar-section .navbar").css("background-color", "rgb(249 251 255)");
+                                                            }
+                                                            else {
+                                                                $(".top-newbar-section .navbar").css("background-color", "transparent");
+                                                            }
+                                                        });
+                                                    });
+                                                </script>
+    </body>
+
+    </html>

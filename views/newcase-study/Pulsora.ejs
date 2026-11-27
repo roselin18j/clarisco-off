@@ -1,0 +1,748 @@
+<%- include('../common-new/header') %>
+
+    <body class="nw-banner-wt-1">
+
+        <%- include('../common-new/navbar') %>
+
+            <section class="pawqeris-hero">
+                <div class="container-fluid">
+                    <div class="row pawqeris-hero-row align-items-center justify-content-center">
+
+                        <div class="col-lg-4 col-md-5 text-start">
+                            <h1 class="pawqeris-hero-title mb-3">
+                                Pulsora: A Fitness Platform That Turns Every Workout Into Rewards
+                            </h1>
+
+                            <a href="jacascript:void(0)" data-bs-toggle="modal" data-bs-target="#PopForm"
+                                class="btn pawqeris-hero-btn">
+                                Click Now
+                            </a>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 text-center hero-img">
+                            <img src="https://assets.clarisco.com/assets/case-study/pul-1.webp"
+                                alt="Pawqeris Pet Identity and Care Ecosystem" class="img-fluid pawqeris-hero-image">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pawqeris-snapshot py-5">
+                <div class="container">
+
+                    <h2 class="text-center case-htags fw-bold mb-4">
+                        Project Snapshot
+                    </h2>
+                    <img src="https://assets.clarisco.com/assets/case-study/paw-mob2.webp" alt="Pawqeris Project Snapshot"
+                        class="mob-img">
+
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="lftProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Project</h6>
+                                <p>Pulsora</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item paw-two">
+                                <h6>Industry</h6>
+                                <p>Fitness, Sports Tech, Wellness, Rewards</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-left-item">
+                                <h6>Platform</h6>
+                                <p>iOS and Android apps, plus a web command center for professionals</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center cenImg-item p-0">
+                            <img src="https://assets.clarisco.com/assets/case-study/pul-2.webp" alt="Pawqeris Project Snapshot"
+                                class="img-fluid">
+
+                        </div>
+
+                        <div class="rytProj-item cont-itm p-0">
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Users</h6>
+                                <p>Athletes, fitness enthusiasts, coaches, clubs, dietitians, doctors</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item paw-two">
+                                <h6>Core Technology</h6>
+                                <p>Activity Tracking, Wearable Integration, AI Coaching, Rewards</p>
+                            </div>
+
+                            <div class="pawqeris-info-item pawqeris-right-item">
+                                <h6>Delivered by</h6>
+                                <p>Clarisco Solutions</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pawqeris-overview py-3 py-lg-5 py-md-4">
+                <div class="container">
+
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-10">
+
+
+
+                            <h2 class="case-htags mb-3">
+                                Overview
+                            </h2>
+
+                            <p class="pawqeris-overview-text col-lg-8 mx-auto">
+                                Pulsora is a fitness platform that pays people back for moving. Every run, ride, gym
+                                session, or training class earns points, and those points build into a personal score
+                                that reflects body, mind, spirit, and community.
+                            </p>
+
+                            <p class="pawqeris-overview-text">
+                                The platform has two sides. Athletes get a daily app with an AI trainer, a live map of
+                                nearby training partners and a reward wallet. Coaches, clubs, dietitians and doctors get
+                                a command center to manage clients, bookings, payments and plans.
+                            </p>
+
+                            <p class="pawqeris-overview-text mb-4">
+                                Clarisco Solutions delivered the project from concept to launch, covering strategy, UX,
+                                mobile and web development, AI coaching, rewards logic, integrations and testing.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 col-md-9 col-11 text-center">
+                            <img src="https://assets.clarisco.com/assets/case-study/pul-3.webp"
+                                alt="Pawqeris Pet Care Platform Overview" class="img-fluid pawqeris-overview-image">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <% const challengeData=[ { title: "Weak motivation" ,
+                description: "Progress is slow to see, and there is little reward for showing up consistently." }, {
+                title: "Isolation" , description: "Training alone is hard, and finding partners nearby is awkward." }, {
+                title: "Generic plans" ,
+                description: "Workout advice ignores sleep, recovery, and how the person feels that day." }, {
+                title: "Fragmented tools" ,
+                description: "Tracking, coaching, nutrition, and payments live in separate apps." }, {
+                title: "Heavy admin for professionals " ,
+                description: "Coaches lose time on scheduling, invoicing, and client follow-up." }, {
+                title: "Easy to cheat" , description: "Reward apps often fail when users fake activity." } ]; %>
+
+                <section class="pawqeris-challenge py-5">
+                    <div class="container">
+
+                        <div class="text-center mb-4">
+                            <h2 class="case-htags mb-3">The Challenge</h2>
+                            <p class="pawqeris-challenge-description">
+                                Most people start fitness routines with energy and drop them within weeks. Our research
+                                with athletes, coaches and clubs showed why.
+                            </p>
+                        </div>
+
+                        <% challengeData.forEach((item)=> { %>
+                            <div
+                                class="pawqeris-challenge-item d-flex align-items-stretch mb-2 mb-lg-3 col-lg-11 mx-auto">
+
+                                <b
+                                    class="pawqeris-challenge-label d-flex align-items-center justify-content-center text-center">
+                                    <%= item.title %>
+                                </b>
+
+                                <p class="pawqeris-challenge-content d-flex align-items-center">
+                                    <%= item.description %>
+                                </p>
+
+                            </div>
+                            <% }) %>
+
+                    </div>
+                </section>
+
+
+                <% const objectivesData=[ "Reward real, verified activity across many sports."
+                    , "Build daily habits through scores, streaks, and community."
+                    , "Personalise training using sleep, recovery and performance data."
+                    , "Give coaches and clinicians one place to run their practice."
+                    , "Keep rewards fair by detecting fake or manipulated workouts." ]; const solutionData={
+                    title: "Our Solution" ,
+                    description: "Our guiding idea was that effort should count. Pulsora measures what a person actually does, converts it into points and a clear score, and uses that momentum to bring training, coaching, and community together."
+                    }; %>
+
+
+
+                    <section class="pawqeris-objectives py-4 py-lg-5">
+                        <div class="container">
+
+                            <div class="row pawqeris-obj-row align-items-start position-relative g-0">
+
+                                <!-- Curve divider -->
+                                <div class="pawqeris-objectives-curve d-none d-md-block">
+                                    <img src="https://assets.clarisco.com/assets/case-study/curve.webp" alt="" class="img-fluid">
+                                </div>
+
+                                <!-- Objectives -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-left">
+
+
+                                    <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                        Objectives
+                                    </h2>
+
+                                    <div class="pawqeris-objectives-line mb-3"></div>
+
+                                    <p class="pawqeris-objectives-intro mb-3 mb-md-4 mb-lg-4">
+                                        These objectives put honest effort at the centre, rewarding real activity while
+                                        keeping training personal and social. They also make sure coaches and clubs get
+                                        tools that save time instead of adding work.
+                                    </p>
+
+                                    <ol class="pawqeris-objectives-list list-unstyled mb-0">
+                                        <% objectivesData.forEach((objective, index)=> { %>
+                                            <li class="d-flex align-items-start mb-2 mb-lg-3 mb-md-3">
+                                                <span class="pawqeris-objective-number me-3">
+                                                    <%= String(index + 1).padStart(2, '0' ) %>.
+                                                </span>
+
+                                                <span class="pawqeris-objective-text">
+                                                    <%= objective %>
+                                                </span>
+                                            </li>
+                                            <% }) %>
+                                    </ol>
+
+                                </div>
+
+
+                                <!-- Our Solution -->
+                                <div class="col-md-6 pawqeris-objectives-content pawqeris-objectives-right">
+
+
+                                    <h2 class="case-htags pawqeris-objectives-title mb-2">
+                                        <%= solutionData.title %>
+                                    </h2>
+
+                                    <div class="pawqeris-objectives-line mb-3"></div>
+
+                                    <p class="pawqeris-solution-description mb-4">
+                                        <%= solutionData.description %>
+                                    </p>
+
+                                    <div class="pawqeris-solution-highlight text-center">
+                                        "Fitness sticks when effort is recognised. Pulsora turns every run, ride and
+                                        session into progress people can see, share and be rewarded for."
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <% const primaryFeaturesData=[ { title: "Multi-Sport Tracking:" ,
+                        description: "Running, cycling, walking, swimming, gym sessions and team sports." }, {
+                        title: "Points for Effort:" ,
+                        description: "Points reflect real exertion, not just distance, so every fitness level can earn fairly."
+                        }, { title: "Personal Score:" ,
+                        description: "A daily score that combines physical activity, mental wellbeing, mindful practice, and community participation."
+                        }, { title: "Streaks and Milestones:" ,
+                        description: "Rewards for steady habits, personal bests, and challenges completed." }, {
+                        title: "Reward Wallet:" ,
+                        description: "Points can be redeemed for partner offers, discounts, premium features, and event entries."
+                        } ]; %>
+
+                        <section class="pawqeris-primary-features  py-5">
+                            <div class="container">
+
+                                <div class="text-center mb-4">
+                                    <h2 class="case-htags mb-2">
+                                        Primary Features
+                                    </h2>
+
+                                    <p class="pawqeris-features-description mb-2">
+                                        Activity Rewards Engine
+                                    </p>
+
+                                    <p class="pawqeris-features-description mb-0">
+                                        Workouts are captured through the phone and connected wearables, then converted
+                                        into points based on type, duration, intensity, and consistency. Core elements
+                                        include:
+                                    </p>
+                                </div>
+
+                                <div class="mt-2 col-lg-11 mx-auto row justify-content-center align-items-start g-4">
+
+                                    <div class="col-lg-5 col-md-5">
+                                        <img src="https://assets.clarisco.com/assets/case-study/pul-4.webp"
+                                            alt="Pawqeris Primary Features" class="img-fluid pawqeris-features-image">
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7">
+                                        <ul class="pawqeris-features-list mb-0">
+                                            <% primaryFeaturesData.forEach((item)=> { %>
+                                                <li class="pawqeris-feature-item">
+                                                    <h6>
+                                                        <%= item.title %>
+                                                    </h6>
+                                                    <p>
+                                                        <%= item.description %>
+                                                    </p>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <% const bookingData=[ { title: "AI Trainer" ,
+                            description: "A personal trainer in the app that builds a daily plan from the person's goals, recent workouts, and sleep. It asks before changing a plan, explains why, and adjusts for tired days, injury risk, and recovery needs."
+                            }, { title: "Live Training Map" ,
+                            description: "A map showing nearby athletes, group runs, classes, and clubs, so users can find partners, join sessions, and train together safely."
+                            } ]; const secondaryFeaturesData=[ { title: "Daily Moments" ,
+                            description: "A simple routine built around three touchpoints a day, such as a morning check-in, a training session, and an evening reflection."
+                            }, { title: "Coach Marketplace" ,
+                            description: "Athletes discover, compare, and book verified coaches, with payments handled in-app and the majority of each booking going to the coach."
+                            }, { title: "Professional Command Center" ,
+                            description: "A web dashboard for coaches, clubs, dietitians and doctors to manage clients, schedules, plans, payments and progress."
+                            }, { title: "Wearable Sync" ,
+                            description: "Watches and bands feed heart rate, sleep, and activity data into the score and the AI trainer."
+                            }, { title: "Clubs and Teams" ,
+                            description: "Groups for running clubs, gyms and sports teams, with shared goals, leaderboards and announcements."
+                            }, { title: "Challenges and Leaderboards" ,
+                            description: "Friendly competitions by distance, effort or consistency, with rewards for winners and participants."
+                            }, { title: "Nutrition Support" ,
+                            description: "Meal guidance and tracking, with the option to share data with a dietitian."
+                            }, { title: "Community Feed" ,
+                            description: "A space to share achievements, photos, and encouragement." }, {
+                            title: "Events and Partner Offers" ,
+                            description: "Access to races, workshops, and brand-sponsored challenges, with offers tied to points."
+                            } ]; %>
+
+                            <section class="pawqeris-booking-features col-lg-9 mx-auto  py-3 py-lg-5 py-md-4">
+                                <div class="container">
+
+                                    <!-- Booking Feature -->
+                                    <% bookingData.forEach((item)=> { %>
+                                        <div class="row  mb-4">
+                                            <div class="col-lg-9">
+                                                <h2 class="pawqeris-booking-title mb-2">
+                                                    <%= item.title %>
+                                                </h2>
+
+                                                <p class="pawqeris-booking-description mb-0">
+                                                    <%= item.description %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <% }); %>
+
+                                            <div class="row justify-content-center">
+                                                <div class="w-100">
+
+                                                    <h3 class="pawqeris-secondary-title mb-3">
+                                                        Secondary Features
+                                                    </h3>
+
+                                                    <div class="pawqeris-secondary-card">
+                                                        <% secondaryFeaturesData.forEach((item)=> { %>
+                                                            <div
+                                                                class="pawqeris-secondary-item d-flex align-items-start">
+                                                                <div class="pawqeris-secondary-label">
+                                                                    <h6 class="mb-2">
+                                                                        <%= item.title %>
+                                                                    </h6>
+                                                                </div>
+                                                                <div class="pawqeris-secondary-content">
+                                                                    <p class="mb-0">
+                                                                        <%= item.description %>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <% }) %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                            </section>
+
+                            <section class="pawqeris-additonal py-5">
+                                <div class="container">
+
+                                    <div class="row col-lg-7 mx-auto mb-lg-4 mb-md-3 mb-2">
+                                        <div class="col-12 text-center">
+                                            <h2 class="case-htags">Additional Features Added by Clarisco</h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-5 additonal-rows justify-content-center mt-lg-4 mt-md-3 mt-2">
+
+                                        <!-- Left Column -->
+                                        <div class="col-lg-6 mt-lg-4 mt-md-3 mt-2">
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5 ">
+                                                <h6 class="fw-bold">Anti-Cheat Verification:</h6>
+                                                <p class="mb-0">
+                                                    Checks for impossible speeds, mock GPS, and duplicate uploads, with
+                                                    flagged workouts held for review.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Recovery and Sleep Insights:</h6>
+                                                <p class="mb-0">
+                                                    Readiness guidance that adapts the plan to rest and strain.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Injury Risk Alerts: </h6>
+                                                <p class="mb-0">
+                                                    Warnings when training load rises too fast.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Safety Tools: </h6>
+                                                <p class="mb-0">
+                                                    Live location sharing with a trusted contact during outdoor
+                                                    sessions.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Privacy Controls:</h6>
+                                                <p class="mb-0">
+                                                    Users choose what to share with coaches, clubs, and the community,
+                                                    and can withdraw access at any time.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-0">
+                                                <h6 class="fw-bold">Goal Programs:</h6>
+                                                <p class="mb-0">
+                                                    Guided plans for first 5K, weight loss, strength, and marathon
+                                                    training.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Right Column -->
+                                        <div class="col-lg-6 mt-md-4 mt-lg-4 mt-md-3 mt-2">
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Coach Verification:</h6>
+                                                <p class="mb-0">
+                                                    Credential checks and ratings that build trust in the marketplace.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">In-App Payments and Invoicing:</h6>
+                                                <p class="mb-0">
+                                                    Secure payments, automatic receipts, and payout tracking for
+                                                    professionals.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Brand Sponsor Portal:</h6>
+                                                <p class="mb-0">
+                                                    Tools for partners to launch challenges and track campaign results.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Multilingual Support and Accessibility:</h6>
+                                                <p class="mb-0">
+                                                    Regional languages and accessible design.
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-3 mb-md-4 mb-lg-5">
+                                                <h6 class="fw-bold">Admin and Analytics Console:</h6>
+                                                <p class="mb-0">
+                                                    Moderation, fraud review, partner onboarding, reward settings, and
+                                                    platform insights.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <% const technologyApproachData=[ { layer: "Tracking" ,
+                                approach: "Phone sensors, GPS, and wearable APIs for activity" }, {
+                                layer: "Rewards Engine" , approach: "Rule-based scoring with tiers, streaks" }, {
+                                layer: "AI" ,
+                                approach: "Adaptive coaching that reads training load, sleep, and recovery data" }, {
+                                layer: "Fraud Detection" ,
+                                approach: "Pattern checks on speed, location, and device signals" }, {
+                                layer: "Mobile and Web" ,
+                                approach: "Cross-platform apps and a responsive professional dashboard" }, {
+                                layer: "Payments" ,
+                                approach: "Secure checkout, split payouts to coaches and automated receipts" }, {
+                                layer: "Backend" ,
+                                approach: "Scalable cloud services, secure APIs and role-based access" } , {
+                                layer: "Security" ,
+                                approach: "Encryption, multi-factor login and consent-based data sharing" } ]; %>
+
+
+                                <section class="pawqeris-technology py-3 py-lg-5 py-md-4">
+                                    <div class="container">
+
+                                        <h2 class="case-htags text-center mb-3 mb-lg-4 mb-md-4">
+                                            Our Technology Approach
+                                        </h2>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8 col-md-10">
+
+                                                <div class="table-responsive">
+                                                    <div class="pawqeris-technology-table">
+
+                                                        <div class="row g-0 pawqeris-technology-header">
+                                                            <div class="col-3 text-center">Layer</div>
+                                                            <div class="col-9 text-center">Approach</div>
+                                                        </div>
+
+                                                        <% technologyApproachData.forEach((item)=> { %>
+                                                            <div class="row g-0 pawqeris-technology-row">
+                                                                <div class="col-3">
+                                                                    <div class="pawqeris-technology-layer">
+                                                                        <p>
+                                                                            <%= item.layer %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-9">
+                                                                    <div class="pawqeris-technology-approach">
+                                                                        <p>
+                                                                            <%= item.approach %>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
+
+                                <% const processData=[ { title: "Discovery" ,
+                                    description: "Interviews with athletes, coaches, clubs and clinicians, plus workflow mapping."
+                                    }, { title: "Strategy" ,
+                                    description: "Features grouped into core, secondary, and value-add, with a phased roadmap."
+                                    }, { title: "Design" ,
+                                    description: "Energetic, simple interfaces tested with real athletes before development."
+                                    }, { title: "Development" ,
+                                    description: "Agile sprints for tracking, rewards, AI coaching, the marketplace, and dashboards."
+                                    }, { title: "Testing" ,
+                                    description: "Functional, load, and security testing, plus accuracy checks against real workouts."
+                                    }, { title: "Launch" ,
+                                    description: "A staged rollout with early clubs and coaches, followed by steady refinement."
+                                    } ]; %>
+
+                                    <section class="pawqeris-process py-5">
+                                        <div class="container">
+
+                                            <h2 class="case-htags text-center mb-4">
+                                                Our Process
+                                            </h2>
+
+                                            <div
+                                                class="row align-items-center justify-content-center col-lg-12 mx-auto">
+
+                                                <!-- Process Steps -->
+                                                <div class="col-lg-6 col-md-7">
+                                                    <div class="pawqeris-process-list">
+
+                                                        <% processData.forEach((item)=> { %>
+                                                            <div class="pawqeris-process-item mb-3 mb-md-4 mb-lg-4">
+
+                                                                <h6 class="pawqeris-process-item-title mb-2">
+                                                                    <%= item.title %>:
+                                                                </h6>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <%= item.description %>
+                                                                </p>
+
+                                                            </div>
+                                                            <% }) %>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Process Image -->
+                                                <div class="col-lg-5 col-md-5 text-center">
+                                                    <img src="https://assets.clarisco.com/assets/case-study/pul-5.webp"
+                                                        alt="Pawqeris Development Process"
+                                                        class="img-fluid pawqeris-process-image">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </section>
+
+
+                                    <% const challengeData1=[ { title: "Rewarding fairly" ,
+                                        description: "Points track effort and consistency, so beginners and experienced athletes both progress."
+                                        }, { title: "Stopping fake activity" ,
+                                        description: "Verification checks and manual review protect honest users and the value of rewards."
+                                        }, { title: "Personal data " ,
+                                        description: "Sleep and health information is encrypted, and sharing is always the user's choice."
+                                        }, { title: "Serving two audiences" ,
+                                        description: "Separate experiences for athletes and professionals keep each side simple."
+                                        } ]; %>
+
+
+                                        <section class="pawqeris-challenge py-3 py-lg-5 py-md-4">
+                                            <div class="container">
+
+                                                <h2 class="case-htags text-center mb-3 mb-lg-5 mb-md-4">
+                                                    Challenges and How We Solved Them
+                                                </h2>
+
+                                                <div class="col-lg-10 mx-auto">
+                                                    <ul class="list-unstyled mb-0">
+
+                                                        <% challengeData1.forEach((item)=> { %>
+                                                            <li class="d-flex align-items-baseline gap-2 mb-3 ">
+
+                                                                <span class="text-secondary">•</span>
+
+                                                                <p class="pawqeris-process-item-description mb-0">
+                                                                    <strong class="fw-semibold">
+                                                                        <%= item.title %>
+                                                                    </strong>
+                                                                    - <%= item.description %>
+                                                                </p>
+
+                                                            </li>
+                                                            <% }) %>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </section>
+
+
+                                        <% const
+                                            pawqerisResultsData=[ "Higher workout consistency through daily rewards and streaks."
+                                            , "Stronger community engagement through clubs, maps, and challenges."
+                                            , "Better-matched training plans that reflect sleep and recovery."
+                                            , "Less admin and faster payments for coaches and clubs."
+                                            , "New revenue and brand-visibility paths for partners and sponsors." ]; %>
+
+                                            <section class="pawqeris-results py-5 ">
+                                                <div class="container">
+
+                                                    <div
+                                                        class="d-flex res-row col-lg-11 mx-auto align-items-center justify-content-between gap-4">
+
+                                                        <!-- Left Content -->
+                                                        <div class="pawqeris-results-content col-lg-6 col-md-7">
+
+                                                            <h2 class="case-htags fw-bold mb-4">
+                                                                Results and Impact of Pawqeris
+                                                            </h2>
+
+                                                            <ul class="list-unstyled mb-0">
+                                                                <% pawqerisResultsData.forEach((item)=> { %>
+                                                                    <li
+                                                                        class="d-flex align-items-baseline gap-2 mb-3 mb-md-2">
+                                                                        <span class="text-secondary">•</span>
+                                                                        <p class="pawqeris-results-text mb-0">
+                                                                            <%= item %>
+                                                                        </p>
+                                                                    </li>
+                                                                    <% }) %>
+                                                            </ul>
+
+                                                        </div>
+
+                                                        <div
+                                                            class="pawqeris-results-image-wrapper col-lg-5 col-md-5 text-center">
+                                                            <img src="https://assets.clarisco.com/assets/case-study/pul-6.webp"
+                                                                alt="Pawqeris Results and Impact"
+                                                                class="img-fluid pawqeris-results-image">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </section>
+
+
+                                            <section class="pawqeris-conclusion py-3 py-lg-5 py-md-4 col-lg-9 mx-auto">
+                                                <div class="container">
+
+                                                    <h2 class="case-htags fw-bold mb-3">
+                                                        Conclusion
+                                                    </h2>
+
+                                                    <p class="pawqeris-conclusion-text mb-2 mb-lg-4 mb-md-3">
+                                                        Pulsora shows how a fitness app can turn effort into lasting
+                                                        habits. By rewarding real activity, personalising training and
+                                                        connecting athletes with coaches and communities, the platform
+                                                        makes staying active more rewarding and more social.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-2 mb-lg-4 mb-md-3">
+                                                        At Clarisco Solutions, we combine technical depth with a
+                                                        user-first approach to turn ambitious ideas like Pulsora into
+                                                        products people use daily.
+                                                    </p>
+
+                                                    <p class="pawqeris-conclusion-text mb-0">
+                                                        Planning a fitness or rewards platform like Pulsora? Talk to Clarisco Solutions.
+                                                    </p>
+
+                                                </div>
+                                            </section>
+
+
+                                            <%- include('../common-new/footer') %>
+
+                                                            <script>
+                                                                $(document).ready(function () {
+                                                                    $(window).scroll(function () {
+                                                                        var wscroll = $(this).scrollTop();
+                                                                        if (wscroll > 50) {
+                                                                            $(".top-newbar-section .navbar").css("background-color", "rgb(249 251 255)");
+                                                                        }
+                                                                        else {
+                                                                            $(".top-newbar-section .navbar").css("background-color", "transparent");
+                                                                        }
+                                                                    });
+                                                                });
+                                                            </script>
+    </body>
+
+    </html>

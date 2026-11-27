@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!--email_off--><!-- Cloudflare: skip email obfuscation (its decode script cost ~250ms of main-thread time on mobile; the addresses are already in plain mail links). Closed at the end of footer.ejs. -->
+
+  <!-- Perf (TBT): pages register many DOMContentLoaded listeners (one per slider
+       / section). Browsers run them all inside ONE task, which on mobile became a
+       ~500ms long task. Run each listener in its own task instead, in the same
+       order. window 'load' listeners that fire while DOMContentLoaded work is
+       still queued are queued behind it, so load code still runs after it.
+       Perf (LCP): the footer's library scripts (bootstrap, swiper, validation...)
+       are loaded via window.__claLoadScripts at DOMContentLoaded instead of as
+       <script defer>, so they no longer compete with the hero image. Queued
+       DOMContentLoaded / load work waits for them, exactly as it waited for the
+       defer scripts before. -->
+  <script>
+    (function () {
+      var queue = [], scheduled = false, loaded = false, gate = 0, root = document.documentElement;
+      var docAdd = document.addEventListener, winAdd = window.addEventListener;
+      // 'cla-preinit' lets CSS hide not-yet-initialised slider slides (no stacked
+      // slides -> no layout shift). Removed once the page has loaded and all queued
+      // init work ran, so a slider that never initialises looks as it did before.
+      root.classList.add('cla-preinit');
+      function busy() { return scheduled || gate > 0; }
+      function maybeDone() { if (loaded && !queue.length && !gate) root.classList.remove('cla-preinit'); }
+      window.addEventListener('load', function () { loaded = true; setTimeout(maybeDone, 0); });
+      function pump() {
+        if (gate > 0) { scheduled = false; return; }
+        var job = queue.shift();
+        if (job) { try { job(); } catch (e) { setTimeout(function () { throw e; }); } }
+        if (queue.length) setTimeout(pump, 0); else { scheduled = false; maybeDone(); }
+      }
+      function kick() {
+        if (!scheduled && !gate && queue.length) { scheduled = true; setTimeout(pump, 0); }
+      }
+      function enqueue(job) { queue.push(job); kick(); }
+      // Load scripts in order (async=false keeps execution order), starting after
+      // window load (see below). Each entry: a URL string or {src, integrity}.
+      window.__claLoadScripts = function (list) {
+        gate++;
+        function start() {
+          var left = list.length;
+          function done() { if (--left <= 0) { gate--; kick(); maybeDone(); } }
+          if (!left) return done();
+          list.forEach(function (item) {
+            var s = document.createElement('script');
+            s.src = item.src || item;
+            if (item.integrity) s.integrity = item.integrity;
+            s.async = false;
+            s.onload = s.onerror = done;
+            document.body.appendChild(s);
+          });
+        }
+        // Start after window 'load' (i.e. after the hero image has painted) so these
+        // requests never compete with LCP, even when the HTML or hero arrives late.
+        // Fallback: 2.5s after DOMContentLoaded in case 'load' is held up.
+        var started = false;
+        function startOnce() { if (!started) { started = true; start(); } }
+        if (loaded || document.readyState === 'complete') startOnce();
+        else {
+          winAdd.call(window, 'load', function () { requestAnimationFrame(function () { setTimeout(startOnce, 0); }); });
+          docAdd.call(document, 'DOMContentLoaded', function () { setTimeout(startOnce, 2500); });
+        }
+      };
+      function patch(target, eventType, onlyWhenBusy) {
+        var add = target.addEventListener, remove = target.removeEventListener, pairs = [];
+        target.addEventListener = function (type, fn, opts) {
+          if (type !== eventType || !fn) return add.apply(this, arguments);
+          var self = this;
+          var wrapped = function (ev) {
+            var job = function () {
+              if (typeof fn === 'function') fn.call(self, ev); else fn.handleEvent(ev);
+            };
+            if (onlyWhenBusy && !busy()) job(); else enqueue(job);
+          };
+          pairs.push([fn, wrapped]);
+          return add.call(this, type, wrapped, opts);
+        };
+        target.removeEventListener = function (type, fn, opts) {
+          if (type === eventType) {
+            for (var i = 0; i < pairs.length; i++) if (pairs[i][0] === fn) { fn = pairs[i][1]; pairs.splice(i, 1); break; }
+          }
+          return remove.call(this, type, fn, opts);
+        };
+      }
+      patch(document, 'DOMContentLoaded', false);
+      patch(window, 'load', true);
+    }());
+  </script>
+
+  <!-- Tag Manager loads after interaction/idle so it cannot compete with the critical rendering path. -->
+  <script>
+    (function () {
+      var loaded = false;
+      function loadTagManager() {
+        if (loaded) return;
+        loaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PSS37HK';
+        document.head.appendChild(script);
+      }
+      ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (eventName) {
+        window.addEventListener(eventName, loadTagManager, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadTagManager, 4000); }, { once: true });
+    }());
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <% const pageLink=(metadata && metadata.page_link) || (typeof pageSlug !== 'undefined' ? pageSlug : ''); const heroImageMap={
+    'asset-tokenization-development-company' : 'https://assets.clarisco.com/tokenization-imgs/tokbanner.webp'
+    , 'rwa-tokenization-platform-development' : 'https://assets.clarisco.com/tokenization-imgs/tokbanner.webp'
+    , 'carbon-credits-tokenization-development' : 'https://assets.clarisco.com/tokenization-imgs/tokbanner.webp'
+    , 'gold-tokenization-development-company' : 'https://assets.clarisco.com/tokenization-imgs/tokbanner.webp'
+    , 'real-estate-tokenization-development-company' : 'https://assets.clarisco.com/tokenization-imgs/tokbanner.webp'
+    , 'cryptocurrency-exchange-development' : 'https://assets.clarisco.com/cryptocurrency-img/landing-banner.webp'
+    , 'white-label-crypto-exchange' : 'https://assets.clarisco.com/cryptocurrency-img/landing-banner.webp'
+    , 'crypto-trading-bot-development' : 'https://assets.clarisco.com/bot-img/botbanner-img.webp'
+    , 'crypto-arbitrage-bot-development-company' : 'https://assets.clarisco.com/bot-img/botbanner-img.webp'
+    , 'flash-loan-arbitrage-bot-development' : 'https://assets.clarisco.com/bot-img/botbanner-img.webp'
+    , 'crypto-market-making-bot-development' : 'https://assets.clarisco.com/bot-img/botbanner-img.webp'
+    , 'ai-development-company' : 'https://assets.clarisco.com/ai-image/aimnban.webp'
+    , 'polymarket-clone-script' : 'https://assets.clarisco.com/clarisco-images/ai-pages/PolymarketClone/Banner1.webp'
+    , 'kalshi-clone-script' : 'https://assets.clarisco.com/assets/kalshi-clone/Banner1.webp'
+    , 'cross-chain-nft-marketplace' : 'https://assets.clarisco.com/assets/img/hero-desktop/crosschain-banner1.webp'
+    , 'metaverse-nft-marketplace-development' : 'https://assets.clarisco.com/assets/img/hero-desktop/crosschain-banner1.webp'
+    , 'adaptive-ai-development-company' : 'https://assets.clarisco.com/assets/img/hero-desktop/adapai-ban1.webp'
+    , 'game-development-company' : 'https://assets.clarisco.com/assets/img/hero-desktop/mnban-gam.webp'
+    , 'aaa-game-co-development-company' : 'https://assets.clarisco.com/assets/img/hero-desktop/mnban-gam.webp'
+    , 'unreal-engine-game-development-services' : 'https://assets.clarisco.com/assets/img/hero-desktop/mnban-gam.webp'
+    , 'full-cycle-game-development-outsourcing' : 'https://assets.clarisco.com/assets/img/hero-desktop/mnban-gam.webp'
+    , 'unity-game-development-services' : 'https://assets.clarisco.com/assets/img/hero-desktop/mnban-gam.webp'
+    , 'game-art-outsourcing-2d-3d-animation' : 'https://assets.clarisco.com/assets/img/hero-desktop/gmart-ban1.webp'
+    , 'game-qa-testing-services' : 'https://assets.clarisco.com/assets/img/hero-desktop/gmtets-ban1.webp'
+    , 'game-porting-services-cross-platform-development-studio' : 'https://assets.clarisco.com/assets/img/hero-desktop/port-ban1.webp'
+    };
+    // Self-hosted, resized (800w) variants of the same hero images, served under
+    // 768px viewports so mobile doesn't download the full desktop-resolution asset
+    // (some of these originals were as large as 7680x4320 — see Core Web Vitals fix log).
+    const heroImageMobileMap={
+    'asset-tokenization-development-company' : '/assets/img/hero-mobile/tokbanner-mobile.webp'
+    , 'rwa-tokenization-platform-development' : '/assets/img/hero-mobile/tokbanner-mobile.webp'
+    , 'carbon-credits-tokenization-development' : '/assets/img/hero-mobile/tokbanner-mobile.webp'
+    , 'gold-tokenization-development-company' : '/assets/img/hero-mobile/tokbanner-mobile.webp'
+    , 'real-estate-tokenization-development-company' : '/assets/img/hero-mobile/tokbanner-mobile.webp'
+    , 'cryptocurrency-exchange-development' : '/assets/img/hero-mobile/landing-banner-mobile.webp'
+    , 'white-label-crypto-exchange' : '/assets/img/hero-mobile/landing-banner-mobile.webp'
+    , 'crypto-trading-bot-development' : '/assets/img/hero-mobile/botbanner-img-mobile.webp'
+    , 'crypto-arbitrage-bot-development-company' : '/assets/img/hero-mobile/botbanner-img-mobile.webp'
+    , 'flash-loan-arbitrage-bot-development' : '/assets/img/hero-mobile/botbanner-img-mobile.webp'
+    , 'crypto-market-making-bot-development' : '/assets/img/hero-mobile/botbanner-img-mobile.webp'
+    , 'ai-development-company' : '/assets/img/hero-mobile/aimnban-mobile.webp'
+    , 'polymarket-clone-script' : '/assets/img/hero-mobile/polymarket-banner1-mobile.webp'
+    , 'kalshi-clone-script' : '/assets/img/hero-mobile/kalshi-banner1-mobile.webp'
+    , 'cross-chain-nft-marketplace' : '/assets/img/hero-mobile/crosschain-banner1-mobile.webp'
+    , 'metaverse-nft-marketplace-development' : '/assets/img/hero-mobile/crosschain-banner1-mobile.webp'
+    , 'adaptive-ai-development-company' : '/assets/img/hero-mobile/adapai-ban1-mobile.webp'
+    , 'game-development-company' : '/assets/img/hero-mobile/mnban-gam-mobile.webp'
+    , 'aaa-game-co-development-company' : '/assets/img/hero-mobile/mnban-gam-mobile.webp'
+    , 'unreal-engine-game-development-services' : '/assets/img/hero-mobile/mnban-gam-mobile.webp'
+    , 'full-cycle-game-development-outsourcing' : '/assets/img/hero-mobile/mnban-gam-mobile.webp'
+    , 'unity-game-development-services' : '/assets/img/hero-mobile/mnban-gam-mobile.webp'
+    , 'game-art-outsourcing-2d-3d-animation' : '/assets/img/hero-mobile/gmart-ban1-mobile.webp'
+    , 'game-qa-testing-services' : '/assets/img/hero-mobile/gmtets-ban1-mobile.webp'
+    , 'game-porting-services-cross-platform-development-studio' : '/assets/img/hero-mobile/port-ban1-mobile.webp'
+    , 'home-page' : '/assets/img/hero-mobile/home-ai-banner1.webp'
+    };
+    const heroImage=heroImageMap[pageLink];
+    const heroImageMobile=heroImageMobileMap[pageLink]; %>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://assets.clarisco.com/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://assets.clarisco.com/images/favicon.ico">
+
+    <link rel="preconnect" href="https://assets.clarisco.com" crossorigin>
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+
+
+
+
+    <% if (heroImage && heroImageMobile) { %>
+      <link rel="preload" as="image" href="<%- heroImageMobile %>" fetchpriority="high" media="(max-width: 768px)">
+      <link rel="preload" as="image" href="<%- heroImage %>" fetchpriority="high" media="(min-width: 769px)">
+      <style>
+        @media (max-width: 768px) {
+          .nwe-toke-sec-1 { background-image: url('<%- heroImageMobile %>') !important; }
+        }
+      </style>
+      <% } else if (pageLink === 'home-page') { %>
+      <link rel="preload" as="image" href="<%- heroImageMobile %>" imagesrcset="/assets/img/hero-mobile/home-ai-banner1-360.webp 360w, <%- heroImageMobile %> 900w" imagesizes="(max-width: 991px) 45vw, 300px" fetchpriority="high">
+      <% } else if (heroImage) { %>
+        <link rel="preload" as="image" href="<%- heroImage %>" fetchpriority="high">
+        <% } %>
+
+        <link rel="preload" href="/assets/js/jquery-3.6.0.min.js" as="script">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap-5.1.3.min.css">
+
+        <% if (typeof needsSwiper === 'undefined' || needsSwiper) { %>
+        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" media="print" onload="this.onload=null;this.media='all'">
+        <noscript>
+          <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+        </noscript>
+        <% } %>
+
+        <!-- Only the ~135 Font Awesome / Bootstrap icons this site uses (21KB CSS + 19KB
+             fonts instead of ~230KB CSS + ~380KB fonts). Rebuild it when adding icons. -->
+        <link rel="stylesheet" href="/assets/css/clarisco-icons.css?v=1">
+
+        <!-- AOS is disabled below 800px (see footer), so mobile never needs its CSS. -->
+        <link rel="stylesheet" href="/assets/css/aos-2.3.1.css" media="print"
+          onload="this.onload=null;this.media='(min-width: 800px)'">
+        <style>
+          /* Above-the-fold hero must paint immediately: AOS keeps [data-aos] at
+             opacity:0 until its JS runs, which delayed LCP by seconds. */
+          .nwe-toke-sec-1 [data-aos], .nw-banner-sec-1 [data-aos], .nwe-toke-sec-2 [data-aos] {
+            opacity: 1 !important; transform: none !important; transition: none !important;
+          }
+          /* Until Swiper initialises a slider, its slides stack vertically and then
+             collapse (layout shift on the home hero). Show only the first slide
+             until init. Swiper adds .swiper-initialized before it measures. */
+          .cla-preinit .swiper:not(.swiper-initialized) > .swiper-wrapper > .swiper-slide ~ .swiper-slide {
+            display: none;
+          }
+          @media (max-width: 799.98px) {
+            [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+          }
+        </style>
+
+        <link rel="preload" href="/assets/fonts/poppins-medium-latin.woff" as="font" type="font/woff" crossorigin>
+
+        <link rel="stylesheet" href="/assets/css/style.css?v=20261118d">
+
+        <link rel="stylesheet" href="/assets/css/newnavbar.css?v=13">
+
+        <link rel="stylesheet" href="/assets/css/newwhitehome.css?v=20261118e">
+        <!-- <link rel="stylesheet" href="/assets/css/hallowen.css"> -->
+        <!-- Inline shim: crypto.css is deferred below, but it's the only
+             place .floating-nav gets its fixed/hidden positioning, and the
+             element sits in the DOM right after <body>. Without this, the
+             floating nav links flash as unstyled static content until
+             crypto.css loads. -->
+        <style>
+          .floating-nav {
+            position: fixed;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+          }
+        </style>
+
+        <link rel="stylesheet" href="/build/css/intelInput_18.css?v=20261118d" media="print" onload="this.onload=null;this.media='all'">
+        <noscript>
+          <link rel="stylesheet" href="/build/css/intelInput_18.css?v=20261118d">
+        </noscript>
+
+        <link rel="stylesheet" href="/assets/css/countrySelect.css" media="print" onload="this.onload=null;this.media='all'">
+        <noscript>
+          <link rel="stylesheet" href="/assets/css/countrySelect.css">
+        </noscript>
+
+        <link rel="preload" href="/assets/css/crypto2.css?v=20261118d" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+          <link rel="stylesheet" href="/assets/css/crypto2.css?v=20261118d">
+        </noscript>
+       <!-- <link rel="preload" href="/assets/css/newheader.css" as="style"
+          onload="this.onload=null;this.rel='stylesheet'"> -->
+        <!-- <noscript>
+          <link rel="stylesheet" href="/assets/css/newheader.css">
+        </noscript> -->
+         <link rel="preload" href="/assets/css/casestudy5.css?v=20261118d" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+          <link rel="stylesheet" href="/assets/css/casestudy5.css?v=20261118d">
+        </noscript>
+         <link rel="preload" href="/assets/css/whitelabel1.css?v=1" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+          <link rel="stylesheet" href="/assets/css/whitelabel1.css?v=1">
+        </noscript>
+
+        <% if (metadata) { %>
+
+          <% const metaTitle=metadata.page_meta_title || metadata.blog_category_page_meta_title; const
+            metaDescription=metadata.page_meta_description || metadata.blog_category_page_meta_description; const
+            metaKeywords=metadata.page_meta_keywords || metadata.blog_category_page_meta_keywords; const
+            pageLink=metadata.page_link ? metadata.page_link : metadata.blog_category_link ?
+            `blog/category/${metadata.blog_category_link}` : "" ; %>
+
+            <title><%- metaTitle || 'Clarisco' %></title>
+
+            <% if (pageLink==="home-page" ) { %>
+              <link rel="canonical" href="https://www.clarisco.com/" />
+              <% } else if (pageLink) { %>
+                <link rel="canonical" href="https://www.clarisco.com/<%- pageLink %>" />
+                <% } %>
+
+                  <% if (metaTitle) { %>
+                    <meta name="title" content="<%- metaTitle %>">
+                    <% } %>
+
+                      <% if (metaDescription) { %>
+                        <meta name="description" content="<%- metaDescription %>">
+                        <% } %>
+
+                          <% if (metaKeywords) { %>
+                            <meta name="keywords" content="<%- metaKeywords %>">
+                            <% } %>
+
+                              <% if (metadata.pageimg) { %>
+                                <meta property="og:image" content="<%- metadata.pageimg %>" />
+                                <meta property="og:image:type" content="image/webp" />
+                                <meta property="og:image:width" content="1200" />
+                                <meta property="og:image:height" content="627" />
+                                <meta property="og:image:alt" content="<%- metaTitle || '' %>" />
+                                <meta name="twitter:image" content="<%- metadata.pageimg %>" />
+                                <% } %>
+
+                                  <% if (metaTitle || metaDescription) { %>
+                                    <meta property="og:type" content="website" />
+                                    <meta property="og:url" content="https://www.clarisco.com/<%- pageLink || '' %>" />
+                                    <meta property="og:title" content="<%- metaTitle || '' %>" />
+                                    <meta property="og:description" content="<%- metaDescription || '' %>" />
+
+                                    <meta name="twitter:card" content="summary_large_image" />
+                                    <meta name="twitter:title" content="<%- metaTitle || '' %>" />
+                                    <meta name="twitter:description" content="<%- metaDescription || '' %>" />
+                                    <meta name="twitter:site" content="@clariscosol" />
+                                    <meta name="twitter:creator" content="@clariscosol" />
+                                    <% } %>
+
+                                      <% } else { %>
+
+                                        <%# SEO: routes whose page has no CMS record can pass fallbackMeta {title, description}; a CMS record always wins. %>
+                                        <% const fb = (typeof fallbackMeta !== 'undefined' && fallbackMeta) || {}; %>
+                                        <title><%= fb.title || 'Clarisco - Blockchain, AI & IoT Software Development Company' %></title>
+                                        <% if (fb.description) { %>
+                                          <meta name="description" content="<%= fb.description %>">
+                                          <meta property="og:title" content="<%= fb.title || 'Clarisco' %>" />
+                                          <meta property="og:description" content="<%= fb.description %>" />
+                                        <% } %>
+
+                                        <% } %>
+
+
+                                          <script>
+                                            (function () {
+                                              let telemetryLoaded = false;
+
+                                              function loadScriptOnce(id, src) {
+                                                if (document.getElementById(id)) return;
+                                                const script = document.createElement("script");
+                                                script.id = id;
+                                                script.async = true;
+                                                script.src = src;
+                                                document.head.appendChild(script);
+                                              }
+
+                                              function loadTelemetry() {
+                                                if (telemetryLoaded) return;
+                                                telemetryLoaded = true;
+
+                                                window.clarity = window.clarity || function () {
+                                                  (window.clarity.q = window.clarity.q || []).push(arguments);
+                                                };
+                                                loadScriptOnce("clarity-loader", "https://www.clarity.ms/tag/mu869pal32");
+
+                                                window.twq = window.twq || function () {
+                                                  (window.twq.queue = window.twq.queue || []).push(arguments);
+                                                };
+                                                window.twq.version = '1.1';
+                                                window.twq.queue = window.twq.queue || [];
+                                                loadScriptOnce("twitter-pixel-loader", "https://static.ads-twitter.com/uwt.js");
+                                                window.twq('config', 'pywhw');
+                                              }
+
+                                              ["scroll", "mousemove", "touchstart", "click", "keydown"].forEach(function (eventName) {
+                                                window.addEventListener(eventName, loadTelemetry, { once: true, passive: true });
+                                              });
+
+                                              window.addEventListener("load", function () {
+                                                setTimeout(loadTelemetry, 5000);
+                                              }, { once: true });
+                                            })();
+                                          </script>
+
+                                          <% if (metadata) { %>
+                                            <% if(metadata.page_schema){ %>
+                                              <%- metadata.page_schema %>
+                                                <% } %>
+                                                  <% } %>
+
+
+</head>
